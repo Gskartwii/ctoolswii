@@ -1,0 +1,45 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 11.00
+# Visual Studio 2010
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SzsTool", "SzsTool\SzsTool.csproj", "{001E16F6-3525-439A-87DB-81C0AED7054A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CToolsLibrary", "CToolsLibrary\CToolsLibrary.csproj", "{D149732F-FCE2-4D19-AD79-6F6D3906255D}"
+EndProject
+Project("{54435603-DBB4-11D2-8724-00A0C9A8B90C}") = "CToolsSetup", "CToolsSetup\CToolsSetup.vdproj", "{D659A454-F2BE-4208-BE77-B47F49FEAC03}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BmgTool", "BmgTool\BmgTool.csproj", "{E3AF61A7-A190-45D4-8F17-1D3A786852BD}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|x86 = Debug|x86
+		Publish|x86 = Publish|x86
+		Release|x86 = Release|x86
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{001E16F6-3525-439A-87DB-81C0AED7054A}.Debug|x86.ActiveCfg = Debug|x86
+		{001E16F6-3525-439A-87DB-81C0AED7054A}.Debug|x86.Build.0 = Debug|x86
+		{001E16F6-3525-439A-87DB-81C0AED7054A}.Publish|x86.ActiveCfg = Release|x86
+		{001E16F6-3525-439A-87DB-81C0AED7054A}.Publish|x86.Build.0 = Release|x86
+		{001E16F6-3525-439A-87DB-81C0AED7054A}.Release|x86.ActiveCfg = Release|x86
+		{001E16F6-3525-439A-87DB-81C0AED7054A}.Release|x86.Build.0 = Release|x86
+		{D149732F-FCE2-4D19-AD79-6F6D3906255D}.Debug|x86.ActiveCfg = Debug|x86
+		{D149732F-FCE2-4D19-AD79-6F6D3906255D}.Debug|x86.Build.0 = Debug|x86
+		{D149732F-FCE2-4D19-AD79-6F6D3906255D}.Publish|x86.ActiveCfg = Release|x86
+		{D149732F-FCE2-4D19-AD79-6F6D3906255D}.Publish|x86.Build.0 = Release|x86
+		{D149732F-FCE2-4D19-AD79-6F6D3906255D}.Release|x86.ActiveCfg = Release|x86
+		{D149732F-FCE2-4D19-AD79-6F6D3906255D}.Release|x86.Build.0 = Release|x86
+		{D659A454-F2BE-4208-BE77-B47F49FEAC03}.Debug|x86.ActiveCfg = Debug
+		{D659A454-F2BE-4208-BE77-B47F49FEAC03}.Publish|x86.ActiveCfg = Release
+		{D659A454-F2BE-4208-BE77-B47F49FEAC03}.Publish|x86.Build.0 = Release
+		{D659A454-F2BE-4208-BE77-B47F49FEAC03}.Release|x86.ActiveCfg = Release
+		{E3AF61A7-A190-45D4-8F17-1D3A786852BD}.Debug|x86.ActiveCfg = Debug|x86
+		{E3AF61A7-A190-45D4-8F17-1D3A786852BD}.Debug|x86.Build.0 = Debug|x86
+		{E3AF61A7-A190-45D4-8F17-1D3A786852BD}.Publish|x86.ActiveCfg = Release|x86
+		{E3AF61A7-A190-45D4-8F17-1D3A786852BD}.Publish|x86.Build.0 = Release|x86
+		{E3AF61A7-A190-45D4-8F17-1D3A786852BD}.Release|x86.ActiveCfg = Release|x86
+		{E3AF61A7-A190-45D4-8F17-1D3A786852BD}.Release|x86.Build.0 = Release|x86
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

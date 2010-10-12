@@ -1,0 +1,417 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="ArchiveDirectoryInfoFileCountDescription" xml:space="preserve">
+    <value>The number of files within this folder and all child folders.</value>
+  </data>
+  <data name="ArchiveDirectoryInfoFileCountName" xml:space="preserve">
+    <value>Sub Files</value>
+  </data>
+  <data name="ArchiveDirectoryInfoFolderCountDescription" xml:space="preserve">
+    <value>The number of folders within this folder and all child folders.</value>
+  </data>
+  <data name="ArchiveDirectoryInfoFolderCountName" xml:space="preserve">
+    <value>Sub Directories</value>
+  </data>
+  <data name="ArchiveDirectoryInfoFullPathDescription" xml:space="preserve">
+    <value>The path of the folder within the archive.</value>
+  </data>
+  <data name="ArchiveDirectoryInfoFullPathName" xml:space="preserve">
+    <value>Folder Path</value>
+  </data>
+  <data name="ArchiveDirectoryInfoNameDescription" xml:space="preserve">
+    <value>The name of the folder.</value>
+  </data>
+  <data name="ArchiveDirectoryInfoNameName" xml:space="preserve">
+    <value>Folder Name</value>
+  </data>
+  <data name="ArchiveDirectoryInfoSizeDescription" xml:space="preserve">
+    <value>The size of all of the data in the folder.</value>
+  </data>
+  <data name="ArchiveDirectoryInfoSizeName" xml:space="preserve">
+    <value>Folder Size</value>
+  </data>
+  <data name="ArchiveDirectoryInfoSubFileCountDescription" xml:space="preserve">
+    <value>The number of files directly within this folder.</value>
+  </data>
+  <data name="ArchiveDirectoryInfoSubFileCountName" xml:space="preserve">
+    <value>Child Files</value>
+  </data>
+  <data name="ArchiveDirectoryInfoSubFolderCountDescription" xml:space="preserve">
+    <value>The number of folders directly within this folder.</value>
+  </data>
+  <data name="ArchiveDirectoryInfoSubFolderCountName" xml:space="preserve">
+    <value>Child Directories</value>
+  </data>
+  <data name="ArchiveFileInfoFileOffsetDescription" xml:space="preserve">
+    <value>The offset into the archive of the file.</value>
+  </data>
+  <data name="ArchiveFileInfoFileOffsetName" xml:space="preserve">
+    <value>Data Offset</value>
+  </data>
+  <data name="ArchiveFileInfoFormatDescription" xml:space="preserve">
+    <value>The format of the file.</value>
+  </data>
+  <data name="ArchiveFileInfoFormatName" xml:space="preserve">
+    <value>File Format</value>
+  </data>
+  <data name="ArchiveFileInfoFullPathDescription" xml:space="preserve">
+    <value>The path of the file within the archive.</value>
+  </data>
+  <data name="ArchiveFileInfoFullPathName" xml:space="preserve">
+    <value>File Path</value>
+  </data>
+  <data name="ArchiveFileInfoNameDescription" xml:space="preserve">
+    <value>The name of the file.</value>
+  </data>
+  <data name="ArchiveFileInfoNameName" xml:space="preserve">
+    <value>File Name</value>
+  </data>
+  <data name="ArchiveFileInfoSizeDescription" xml:space="preserve">
+    <value>The size of the file.</value>
+  </data>
+  <data name="ArchiveFileInfoSizeName" xml:space="preserve">
+    <value>File Size</value>
+  </data>
+  <data name="ArchiveMultipleInfoFileCountDescription" xml:space="preserve">
+    <value>The number of files drectly selected.</value>
+  </data>
+  <data name="ArchiveMultipleInfoFileCountName" xml:space="preserve">
+    <value>Files</value>
+  </data>
+  <data name="ArchiveMultipleInfoFolderCountDescription" xml:space="preserve">
+    <value>The number of folders directly selected.</value>
+  </data>
+  <data name="ArchiveMultipleInfoFolderCountName" xml:space="preserve">
+    <value>Directories</value>
+  </data>
+  <data name="ArchiveMultipleInfoSizeDescription" xml:space="preserve">
+    <value>The size of all selected items.</value>
+  </data>
+  <data name="ArchiveMultipleInfoSizeName" xml:space="preserve">
+    <value>Total Size</value>
+  </data>
+  <data name="ArchiveMultipleInfoSubFileCountDescription" xml:space="preserve">
+    <value>The number of files directly and indirectly selected.</value>
+  </data>
+  <data name="ArchiveMultipleInfoSubFileCountName" xml:space="preserve">
+    <value>Total Files</value>
+  </data>
+  <data name="ArchiveMultipleInfoSubFolderCountDescription" xml:space="preserve">
+    <value>The number of folders directly and indirectly selected.</value>
+  </data>
+  <data name="ArchiveMultipleInfoSubFolderCountName" xml:space="preserve">
+    <value>Total Directories</value>
+  </data>
+  <data name="CategoryAppearance" xml:space="preserve">
+    <value>Appearance</value>
+  </data>
+  <data name="CategoryData" xml:space="preserve">
+    <value>Data</value>
+  </data>
+  <data name="FilterAllFiles" xml:space="preserve">
+    <value>All files (*.*)|*.*</value>
+  </data>
+  <data name="StatusFileListError" xml:space="preserve">
+    <value>File list load error - {0}</value>
+  </data>
+  <data name="StatusFileListLoaded" xml:space="preserve">
+    <value>File list loaded</value>
+  </data>
+  <data name="StatusFileListLoading" xml:space="preserve">
+    <value>Loading file list</value>
+  </data>
+  <data name="StatusReady" xml:space="preserve">
+    <value>Ready</value>
+  </data>
+  <data name="StatusTreeLoaded" xml:space="preserve">
+    <value>Folder tree loaded</value>
+  </data>
+  <data name="StatusTreeLoadError" xml:space="preserve">
+    <value>Folder tree load error - {0}</value>
+  </data>
+  <data name="StatusTreeLoading" xml:space="preserve">
+    <value>Loading folder tree</value>
+  </data>
+  <data name="TitleFileExport" xml:space="preserve">
+    <value>Export File</value>
+  </data>
+  <data name="MessageErrorLoad" xml:space="preserve">
+    <value>Load error
+{0}</value>
+  </data>
+  <data name="MessageErrorSave" xml:space="preserve">
+    <value>Save error
+{0}</value>
+  </data>
+  <data name="MessageFileClose" xml:space="preserve">
+    <value>The file {0} has changed since it was last saved.
+Do you wish to save the changes?</value>
+  </data>
+  <data name="DescriptionExportFolder" xml:space="preserve">
+    <value>Please select the folder to extract the files to. The exported files will erase any files with the same name in the directory.</value>
+  </data>
+  <data name="MessageErrorExportMultiple" xml:space="preserve">
+    <value>The following files could not be exported:
+{0}
+Please check you have enough disk space, and that files do not already exist with the same name, that are in use.</value>
+  </data>
+  <data name="MessageErrorExportSingle" xml:space="preserve">
+    <value>The following file could not be exported:
+{0}
+Please check you have enough disk space, and that a file does not already exist with the same name, that is in use.</value>
+  </data>
+  <data name="MessagePreviewNone" xml:space="preserve">
+    <value>No preview available</value>
+  </data>
+  <data name="StatusPreviewLoaded" xml:space="preserve">
+    <value>Preview loaded</value>
+  </data>
+  <data name="StatusPreviewLoading" xml:space="preserve">
+    <value>Loading preview</value>
+  </data>
+  <data name="StatusPropertiesLoaded" xml:space="preserve">
+    <value>Properties loaded</value>
+  </data>
+  <data name="StatusPropertiesLoading" xml:space="preserve">
+    <value>Loading properties</value>
+  </data>
+  <data name="ArchiveInfoSizeDescription" xml:space="preserve">
+    <value>The total uncompressed size of the archive</value>
+  </data>
+  <data name="ArchiveInfoSizeName" xml:space="preserve">
+    <value>Total Size</value>
+  </data>
+  <data name="ArchiveInfoSubFileCountDescription" xml:space="preserve">
+    <value>The total number of files in this archive</value>
+  </data>
+  <data name="ArchiveInfoSubFileCountName" xml:space="preserve">
+    <value>Files</value>
+  </data>
+  <data name="ArchiveInfoSubFolderCountDescription" xml:space="preserve">
+    <value>The total number of folders in this archive</value>
+  </data>
+  <data name="ArchiveInfoSubFolderCountName" xml:space="preserve">
+    <value>Folders</value>
+  </data>
+  <data name="ArchiveInfoTypeDescription" xml:space="preserve">
+    <value>The file format of the archive</value>
+  </data>
+  <data name="ArchiveInfoTypeName" xml:space="preserve">
+    <value>Format</value>
+  </data>
+  <data name="ArchiveTypeU8" xml:space="preserve">
+    <value>Nintendo U8 Archive</value>
+  </data>
+  <data name="TitleFileReplace" xml:space="preserve">
+    <value>Replace File</value>
+  </data>
+  <data name="MessageErrorExport" xml:space="preserve">
+    <value>Export error
+{0}</value>
+  </data>
+  <data name="MessageErrorReplace" xml:space="preserve">
+    <value>Replace error
+{0}</value>
+  </data>
+  <data name="NameFolderUntitled" xml:space="preserve">
+    <value>Untitled {0}</value>
+  </data>
+  <data name="MessageErrorImport" xml:space="preserve">
+    <value>Import error
+{0}</value>
+  </data>
+  <data name="MessageErrorImportMultiple" xml:space="preserve">
+    <value>The following files could not be imported:
+{0}
+Please check that the files are not in use.</value>
+  </data>
+  <data name="MessageErrorImportSingle" xml:space="preserve">
+    <value>The following file could not be exported:
+{0}
+Please check that the file is not in use.</value>
+  </data>
+  <data name="TitleFilesImport" xml:space="preserve">
+    <value>Import Files</value>
+  </data>
+  <data name="DescriptionImportFolder" xml:space="preserve">
+    <value>Please select the folder you wish to import. All contained files and sub folders will be imported, preserving their directory strcuture, and renaming the source files if a destination file with the same name already exists.</value>
+  </data>
+  <data name="MessageErrorDelete" xml:space="preserve">
+    <value>Delete error
+{0}</value>
+  </data>
+  <data name="MessageErrorNewFolder" xml:space="preserve">
+    <value>Folder creation error
+{0}</value>
+  </data>
+  <data name="StatusPreviewError" xml:space="preserve">
+    <value>Preview error - {0}</value>
+  </data>
+  <data name="MessageErrorOpenExternal" xml:space="preserve">
+    <value>Open error
+{0}</value>
+  </data>
+  <data name="MessageErrorNewFile" xml:space="preserve">
+    <value>File creation error
+{0}</value>
+  </data>
+  <data name="AssemblyDescription" xml:space="preserve">
+    <value>Editor for U8 archive files</value>
+  </data>
+  <data name="FormatArchiveDescription" xml:space="preserve">
+    <value>Nintendo U8 Archive</value>
+  </data>
+  <data name="FormatArchiveName" xml:space="preserve">
+    <value>Nintendo U8 Archive</value>
+  </data>
+  <data name="FormatCategoryArchives" xml:space="preserve">
+    <value>Archives</value>
+  </data>
+  <data name="FormatCompressedArchiveDescription" xml:space="preserve">
+    <value>Compressed Nintendo U8 Archive</value>
+  </data>
+  <data name="FormatCompressedArchiveName" xml:space="preserve">
+    <value>Compressed Nintendo U8 Archive</value>
+  </data>
+  <data name="PreviewNoPreview" xml:space="preserve">
+    <value>No preview available</value>
+  </data>
+  <data name="MessageErrorFileLock" xml:space="preserve">
+    <value>The file is in use and could not be changed.</value>
+  </data>
+  <data name="MessageErrorLock" xml:space="preserve">
+    <value>The file {0} is in use and could not be changed.</value>
+  </data>
+  <data name="MessageErrorLocks" xml:space="preserve">
+    <value>The files
+{0}
+are in use and could not be changed.</value>
+  </data>
+  <data name="MessageDeleteFile" xml:space="preserve">
+    <value>Are you sure you want to permenantly delete this file?</value>
+  </data>
+  <data name="MessageDeleteFiles" xml:space="preserve">
+    <value>Are you sure you want to permenatnly delete these files?</value>
+  </data>
+  <data name="MessageErrorCloseLock" xml:space="preserve">
+    <value>Some files are currently open by editors, and so the file cannot be closed.
+Do you wish to force the editors to close? You will be prompted to save any unsaved work.</value>
+  </data>
+</root>

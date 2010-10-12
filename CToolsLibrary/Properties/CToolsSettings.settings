@@ -1,0 +1,15 @@
+﻿<?xml version='1.0' encoding='utf-8'?>
+<SettingsFile xmlns="http://schemas.microsoft.com/VisualStudio/2004/01/settings" CurrentProfile="(Default)" GeneratedClassNamespace="Chadsoft.CTools.Properties" GeneratedClassName="CToolsSettings">
+  <Profiles />
+  <Settings>
+    <Setting Name="binaryUnits" Description="Whether or not to use binary prefixes in file sizes" Type="System.Boolean" Scope="User">
+      <Value Profile="(Default)">False</Value>
+    </Setting>
+    <Setting Name="compressionLookBack" Type="System.Int32" Scope="User">
+      <Value Profile="(Default)">63</Value>
+    </Setting>
+    <Setting Name="lastTimeUpdate" Type="System.String" Scope="User">
+      <Value Profile="(Default)">0.0.0</Value>
+    </Setting>
+  </Settings>
+</SettingsFile>

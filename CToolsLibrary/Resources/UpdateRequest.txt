@@ -1,0 +1,5 @@
+GET /ctools/updatenotification.aspx HTTP/1.1
+Host: chadderz.is-a-geek.com
+User-Agent: CTools/1.00.0002
+Accept-Language: en
+

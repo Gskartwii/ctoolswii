@@ -1,0 +1,391 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="AssemblyDescription" xml:space="preserve">
+    <value>The core CTools library.</value>
+  </data>
+  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="AssemblyImage" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\cog.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="EditorDescriptionBinary" xml:space="preserve">
+    <value>A hex editor.</value>
+  </data>
+  <data name="EditorNameBinary" xml:space="preserve">
+    <value>Hex editor</value>
+  </data>
+  <data name="FileDescriptionEmpty" xml:space="preserve">
+    <value>A blank completely empty file.</value>
+  </data>
+  <data name="FileImageEmpty" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\page_white.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="FileNameEmpty" xml:space="preserve">
+    <value>Empty File</value>
+  </data>
+  <data name="FormatCategoryAnimations" xml:space="preserve">
+    <value>Animation files</value>
+  </data>
+  <data name="FormatCategoryData" xml:space="preserve">
+    <value>Data files</value>
+  </data>
+  <data name="FormatCategoryEffects" xml:space="preserve">
+    <value>Effect files</value>
+  </data>
+  <data name="FormatCategoryFonts" xml:space="preserve">
+    <value>Font files</value>
+  </data>
+  <data name="FormatCategoryImages" xml:space="preserve">
+    <value>Image files</value>
+  </data>
+  <data name="FormatCategoryLayouts" xml:space="preserve">
+    <value>Layout files</value>
+  </data>
+  <data name="FormatCategoryLighting" xml:space="preserve">
+    <value>Lighting files</value>
+  </data>
+  <data name="FormatCategoryModels" xml:space="preserve">
+    <value>Model files</value>
+  </data>
+  <data name="FormatCategoryMusic" xml:space="preserve">
+    <value>Music files</value>
+  </data>
+  <data name="FormatCategoryVideo" xml:space="preserve">
+    <value>Video files</value>
+  </data>
+  <data name="FormatDescriptionBinary" xml:space="preserve">
+    <value>Binary data file.</value>
+  </data>
+  <data name="FormatDescriptionBlight" xml:space="preserve">
+    <value>.blight lighting file.</value>
+  </data>
+  <data name="FormatDescriptionBlmap" xml:space="preserve">
+    <value>.blmap lighting file.</value>
+  </data>
+  <data name="FormatDescriptionBmg" xml:space="preserve">
+    <value>.bmg text file</value>
+  </data>
+  <data name="FormatDescriptionBrasd" xml:space="preserve">
+    <value>.brasd object animation file.</value>
+  </data>
+  <data name="FormatDescriptionBrctr" xml:space="preserve">
+    <value>.brctr control file.</value>
+  </data>
+  <data name="FormatDescriptionBreff" xml:space="preserve">
+    <value>.breff effect information file.</value>
+  </data>
+  <data name="FormatDescriptionBreft" xml:space="preserve">
+    <value>.breft effect image file.</value>
+  </data>
+  <data name="FormatDescriptionBrfnt" xml:space="preserve">
+    <value>.brfnt font file.</value>
+  </data>
+  <data name="FormatDescriptionBrlan" xml:space="preserve">
+    <value>.brlan animation file.</value>
+  </data>
+  <data name="FormatDescriptionBrlyt" xml:space="preserve">
+    <value>.brlyt layout file.</value>
+  </data>
+  <data name="FormatDescriptionBrres" xml:space="preserve">
+    <value>.brres model file.</value>
+  </data>
+  <data name="FormatDescriptionBrstm" xml:space="preserve">
+    <value>.brstm music file</value>
+  </data>
+  <data name="FormatDescriptionBti" xml:space="preserve">
+    <value>.bti image file.</value>
+  </data>
+  <data name="FormatDescriptionBwav" xml:space="preserve">
+    <value>.bwav music file</value>
+  </data>
+  <data name="FormatDescriptionCsv" xml:space="preserve">
+    <value>.csv data file.</value>
+  </data>
+  <data name="FormatDescriptionKcl" xml:space="preserve">
+    <value>.kcl collision information file.</value>
+  </data>
+  <data name="FormatDescriptionKmp" xml:space="preserve">
+    <value>.kmp course information file.</value>
+  </data>
+  <data name="FormatDescriptionMid" xml:space="preserve">
+    <value>.mid music file</value>
+  </data>
+  <data name="FormatDescriptionRsca" xml:space="preserve">
+    <value>.rsca camera animation file.</value>
+  </data>
+  <data name="FormatDescriptionThp" xml:space="preserve">
+    <value>.thp video file.</value>
+  </data>
+  <data name="FormatDescriptionTpl" xml:space="preserve">
+    <value>.tpl image file.</value>
+  </data>
+  <data name="FormatDescriptionTxt" xml:space="preserve">
+    <value>.txt text file.</value>
+  </data>
+  <data name="FormatDescriptionUnknown" xml:space="preserve">
+    <value>Unknown data file.</value>
+  </data>
+  <data name="FormatImageBinary" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\page_white_gear.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="FormatImageBlight" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\lightbulb.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="FormatImageBlmap" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\lightbulb_off.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="FormatImageBmg" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\text_align_left.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="FormatImageBrasd" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\bug_go.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="FormatImageBrctr" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\cog1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="FormatImageBreff" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\lightning.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="FormatImageBreft" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\pictures.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="FormatImageBrfnt" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\font.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="FormatImageBrlan" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\layers.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="FormatImageBrlyt" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\layout.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="FormatImageBrres" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\bricks.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="FormatImageBti" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\image.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="FormatImageKcl" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\brick_link.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="FormatImageKmp" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\map.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="FormatImageRsca" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\camera_go.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="FormatImageSound" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\sound.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="FormatImageThp" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\film.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="FormatImageTpl" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\picture.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="FormatImageUnknown" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\page_gear.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="FormatNameBinary" xml:space="preserve">
+    <value>Binary file</value>
+  </data>
+  <data name="FormatNameBlight" xml:space="preserve">
+    <value>Lighting file</value>
+  </data>
+  <data name="FormatNameBlmap" xml:space="preserve">
+    <value>Lighting file</value>
+  </data>
+  <data name="FormatNameBmg" xml:space="preserve">
+    <value>Text file</value>
+  </data>
+  <data name="FormatNameBrasd" xml:space="preserve">
+    <value>Object animation file</value>
+  </data>
+  <data name="FormatNameBrctr" xml:space="preserve">
+    <value>Control file</value>
+  </data>
+  <data name="FormatNameBreff" xml:space="preserve">
+    <value>Effect information file</value>
+  </data>
+  <data name="FormatNameBreft" xml:space="preserve">
+    <value>Effect image file</value>
+  </data>
+  <data name="FormatNameBrfnt" xml:space="preserve">
+    <value>Font file</value>
+  </data>
+  <data name="FormatNameBrlan" xml:space="preserve">
+    <value>Animation file</value>
+  </data>
+  <data name="FormatNameBrlyt" xml:space="preserve">
+    <value>Layout file</value>
+  </data>
+  <data name="FormatNameBrres" xml:space="preserve">
+    <value>Model file</value>
+  </data>
+  <data name="FormatNameBrstm" xml:space="preserve">
+    <value>Music file</value>
+  </data>
+  <data name="FormatNameBti" xml:space="preserve">
+    <value>Image file</value>
+  </data>
+  <data name="FormatNameBwav" xml:space="preserve">
+    <value>Music file</value>
+  </data>
+  <data name="FormatNameCsv" xml:space="preserve">
+    <value>Data file</value>
+  </data>
+  <data name="FormatNameKcl" xml:space="preserve">
+    <value>Collision information file</value>
+  </data>
+  <data name="FormatNameKmp" xml:space="preserve">
+    <value>Course information file</value>
+  </data>
+  <data name="FormatNameMid" xml:space="preserve">
+    <value>Music file</value>
+  </data>
+  <data name="FormatNameRsca" xml:space="preserve">
+    <value>Camera animation file</value>
+  </data>
+  <data name="FormatNameThp" xml:space="preserve">
+    <value>Video file</value>
+  </data>
+  <data name="FormatNameTpl" xml:space="preserve">
+    <value>Image file</value>
+  </data>
+  <data name="FormatNameTxt" xml:space="preserve">
+    <value>Text file</value>
+  </data>
+  <data name="FormatNameUnknown" xml:space="preserve">
+    <value>Data file</value>
+  </data>
+  <data name="MessageBoxTitle" xml:space="preserve">
+    <value>CTools</value>
+  </data>
+  <data name="MessageErrorUpdate" xml:space="preserve">
+    <value>Update error
+{0}</value>
+  </data>
+  <data name="MessageFileClose" xml:space="preserve">
+    <value>The file has changed since it was last saved.
+Do you wish to save the changes?</value>
+  </data>
+  <data name="MessageUpdateAvailable" xml:space="preserve">
+    <value>An update is available to version {0}.
+Do you wish to update now?</value>
+  </data>
+</root>

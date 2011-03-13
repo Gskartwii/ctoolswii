@@ -22,7 +22,7 @@ namespace Chadsoft.CTools.Bmg
 {
     static class Program
     {
-        private static ResourceManager _manager;
+        private static ResourceManager manager;
 
         [STAThread]
         static void Main(string[] args)
@@ -45,18 +45,18 @@ namespace Chadsoft.CTools.Bmg
 
         private static void LoadManager()
         {
-            _manager = new ResourceManager("Chadsoft.CTools.Bmg.Properties.StringResource", typeof(Program).Assembly);
+            manager = new ResourceManager("Chadsoft.CTools.Bmg.Properties.StringResource", typeof(Program).Assembly);
         }
 
         internal static string GetString(string key, params object[] args)
         {
-            if (_manager == null)
+            if (manager == null)
                 LoadManager();
 
-            if (string.IsNullOrEmpty(_manager.GetString(key)))
+            if (string.IsNullOrEmpty(manager.GetString(key)))
                 return null;
 
-            return String.Format(_manager.GetString(key), args);
+            return String.Format(manager.GetString(key), args);
         }
     }
 }

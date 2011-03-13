@@ -208,7 +208,10 @@ namespace Chadsoft.CTools.Bmg
                 output.Write(temp, 0, temp.Length);
             }
 
-            return output.ToArray();
+            temp = output.ToArray();
+            output.Close();
+
+            return temp;
         }
 
         private string FromBinary(byte[] value)

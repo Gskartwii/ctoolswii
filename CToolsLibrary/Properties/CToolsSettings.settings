@@ -11,5 +11,8 @@
     <Setting Name="lastTimeUpdate" Type="System.String" Scope="User">
       <Value Profile="(Default)">0.0.0</Value>
     </Setting>
+    <Setting Name="updateUrl" Type="System.String" Scope="User">
+      <Value Profile="(Default)">http://chadderz.is-a-geek.com/ctools/setup.exe</Value>
+    </Setting>
   </Settings>
 </SettingsFile>

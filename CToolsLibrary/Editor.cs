@@ -22,8 +22,8 @@ namespace Chadsoft.CTools
 {
     public class Editor
     {
-        private CreateInstanceDelegate createInstance;
-        private GeneratePreviewDelegate generatePreview;
+        private CreateInstanceDelegate _createInstance;
+        private GeneratePreviewDelegate _generatePreview;
 
         public virtual string Name { get; protected set; }
         public virtual string Description { get; protected set; }
@@ -34,12 +34,12 @@ namespace Chadsoft.CTools
 
         public virtual EditorInstance CreateInstance(byte[] data, string name, EventHandler<SaveEventArgs> saveEvent, EventHandler closeEvent)
         {
-            return createInstance(data, name, saveEvent, closeEvent);
+            return _createInstance(data, name, saveEvent, closeEvent);
         }
 
         public virtual void GeneratePreview(byte[] data, Graphics graphics)
         {
-            generatePreview(data, graphics);
+            _generatePreview(data, graphics);
         }
 
         protected Editor()
@@ -55,8 +55,8 @@ namespace Chadsoft.CTools
             Version = version;
             Icon = icon;
             EditorFormats = formats;
-            this.createInstance = createInstance;
-            generatePreview = previewDelegate;
+            this._createInstance = createInstance;
+            _generatePreview = previewDelegate;
         }
 
         public virtual int FormatMatch(string name, byte[] data, int offset)

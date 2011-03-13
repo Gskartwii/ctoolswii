@@ -15,6 +15,7 @@
 // along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
 using System.Text;
+using System.Runtime.InteropServices;
 
 namespace System.IO
 {
@@ -75,6 +76,34 @@ namespace System.IO
             FillBuffer(count, 1);
             temp = new byte[count];
             Array.Copy(buffer, 0, temp, 0, count);
+            return temp;
+        }
+
+        public sbyte ReadSByte()
+        {
+            FillBuffer(1, 1);
+
+            unchecked
+            {
+                return (sbyte)buffer[0];
+            }
+        }
+
+        public sbyte[] ReadSBytes(int count)
+        {
+            sbyte[] temp;
+
+            temp = new sbyte[count];
+            FillBuffer(count, 1);
+
+            unchecked
+            {
+                for (int i = 0; i < count; i++)
+                {
+                    temp[i] = (sbyte)buffer[i];
+                }
+            }
+            
             return temp;
         }
 

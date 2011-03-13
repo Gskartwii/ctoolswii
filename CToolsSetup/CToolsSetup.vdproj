@@ -206,7 +206,7 @@
             }
             "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_AC99AA95B2DD44B995DEEF09A4A88037"
             {
-            "SourcePath" = "8:C:\\Users\\Alex\\Documents\\Wii\\CTools End User Licence Agreement.rtf"
+            "SourcePath" = "8:CTools End User Licence Agreement.rtf"
             "TargetName" = "8:EULA.rtf"
             "Tag" = "8:"
             "Folder" = "8:_7BF914D826704C02B386BC1ABCBB2A49"
@@ -231,11 +231,6 @@
             "AssemblyAsmDisplayName" = "8:CToolsLibrary, Version=1.0.4.0, Culture=neutral, PublicKeyToken=d9b59e079b535777, processorArchitecture=x86"
                 "ScatterAssemblies"
                 {
-                    "_F68C654EA360716742C50E1F0838A415"
-                    {
-                    "Name" = "8:CToolsLibrary.dll"
-                    "Attributes" = "3:512"
-                    }
                 }
             "SourcePath" = "8:CToolsLibrary.dll"
             "TargetName" = "8:"
@@ -278,6 +273,29 @@
                     "Verb" = "8:edit"
                     "Arguments" = "8:\"%1\""
                     "Order" = "3:1"
+                    }
+                }
+            }
+            "{5EB83D71-FA18-4901-BE56-DE22E13CC478}:_98E5122CF0AC4B66BBC4FE685192939C"
+            {
+            "Name" = "8:Nintendo BMG File"
+            "Description" = "8:Nintendo BMG File"
+            "Extensions" = "8:.bmg"
+            "MIME" = "8:"
+            "Icon" = "8:_8DD681C9439E42B9A9C46B7BBE3FE328"
+            "IconIndex" = "3:32512"
+                "Command"
+                {
+                "Command" = "8:_8DD681C9439E42B9A9C46B7BBE3FE328"
+                }
+                "Verbs"
+                {
+                    "{95C0C507-CBF0-42B8-B119-07219E384A4A}:_E80FBA21A72045ECB635578CF97015E9"
+                    {
+                    "Command" = "8:&Open"
+                    "Verb" = "8:open"
+                    "Arguments" = "8:\"%1\""
+                    "Order" = "3:0"
                     }
                 }
             }
@@ -369,7 +387,7 @@
         "UseSystemSearchPath" = "11:TRUE"
         "TargetPlatform" = "3:0"
         "PreBuildEvent" = "8:"
-        "PostBuildEvent" = "8:\"C:\\Program Files\\Microsoft SDKs\\Windows\\v7.1\\Bin\\signTool\" sign /n \"Chadsoft\" \"$(BuiltOuputPath)\"\r\n\"C:\\Program Files\\Microsoft SDKs\\Windows\\v7.1\\Bin\\signTool\" sign /n \"Chadsoft\" \"$(ProjectDir)$(Configuration)\\setup.exe\""
+        "PostBuildEvent" = "8:"
         "RunPostBuildEvent" = "3:0"
         }
         "Registry"

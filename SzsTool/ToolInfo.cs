@@ -47,7 +47,7 @@ namespace Chadsoft.CTools.Szs
                 "SZS Explorer",
                 Program.GetString("AssemblyDescription"), 
                 "Chadderz", 
-                new Version(1,0,3,0),
+                new Version(1,0,4,0),
                 Properties.Resources.ApplicationIcon,
                 GetEditors(formats),
                 formats,
@@ -68,7 +68,7 @@ namespace Chadsoft.CTools.Szs
         {
             return new ReadOnlyCollection<Editor>(new Editor[]
                 {
-                    SzsExplorer = new Editor("SZS Explorer", Program.GetString("AssemblyDescription"), "Chadderz", new Version(1,0,1,0), Properties.Resources.ApplicationIcon, formats, CreateInstance, RenderPreview),
+                    SzsExplorer = new Editor("SZS Explorer", Program.GetString("AssemblyDescription"), "Chadderz", new Version(1,0,4,0), Properties.Resources.ApplicationIcon, formats, CreateInstance, RenderPreview),
                 });
         }
 

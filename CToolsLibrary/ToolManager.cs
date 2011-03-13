@@ -313,7 +313,7 @@ namespace Chadsoft.CTools
         {
             Thread checkThread;
 
-            if (Properties.CToolsSettings.Default.lastTimeUpdate != null && new Version (Properties.CToolsSettings.Default.lastTimeUpdate) > CToolsVersion)
+            if (Properties.Settings.Default.lastTimeUpdate != null && new Version (Properties.Settings.Default.lastTimeUpdate) > CToolsVersion)
             {
                 return true;
             }
@@ -351,16 +351,22 @@ namespace Chadsoft.CTools
                 {
                     reader = new StreamReader(stream);
                     time = 0;
-                    while (time++ < 20)
+                    while (time++ < 30)
                     {
                         response = reader.ReadLine();
 
                         if (response.StartsWith("AppVersion: ", StringComparison.OrdinalIgnoreCase))
                         {
-                            Properties.CToolsSettings.Default.lastTimeUpdate = response.Substring(12);
-                            Properties.CToolsSettings.Default.Save();
-                            break;
+                            Properties.Settings.Default.lastTimeUpdate = response.Substring(12);
+                            Properties.Settings.Default.Save();
                         }
+                        else if (response.StartsWith("UpdateUrl: ", StringComparison.OrdinalIgnoreCase))
+                        {
+                            Properties.Settings.Default.updateUrl = response.Substring(11);
+                            Properties.Settings.Default.Save();
+                        }
+                        else if (response.StartsWith("End", StringComparison.OrdinalIgnoreCase))
+                            break;
                     }
                 }
 
@@ -376,7 +382,7 @@ namespace Chadsoft.CTools
             FormWaiting waiting;
             string file;
 
-            if (MessageBox.Show(string.Format(Properties.ResourceSet.MessageUpdateAvailable, Properties.CToolsSettings.Default.lastTimeUpdate), Properties.ResourceSet.MessageBoxTitle, MessageBoxButtons.YesNo, MessageBoxIcon.Information) == DialogResult.No)
+            if (MessageBox.Show(string.Format(Properties.ResourceSet.MessageUpdateAvailable, Properties.Settings.Default.lastTimeUpdate), Properties.ResourceSet.MessageBoxTitle, MessageBoxButtons.YesNo, MessageBoxIcon.Information) == DialogResult.No)
                 return;
 
             waiting = new FormWaiting();
@@ -388,7 +394,7 @@ namespace Chadsoft.CTools
                 Application.DoEvents();
                 WebClient c;
                 c = new WebClient();
-                c.DownloadFile("http://chadderz.is-a-geek.com/ctools/setup.exe", file = Path.ChangeExtension(Path.GetTempFileName(), "exe"));
+                c.DownloadFile(Properties.Settings.Default.updateUrl, file = Path.ChangeExtension(Path.GetTempFileName(), "exe"));
 
                 Process.Start(file);
 

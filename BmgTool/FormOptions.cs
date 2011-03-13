@@ -28,6 +28,7 @@ namespace Chadsoft.CTools.Bmg
             options = new FormOptions();
 
             options.ShowDialog();
+            options.Dispose();
         }
 
         public FormOptions()

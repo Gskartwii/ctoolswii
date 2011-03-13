@@ -188,6 +188,7 @@ namespace Chadsoft.CTools.Bmg
 
             aboutBox = new FormAboutBox();
             aboutBox.ShowDialog();
+            aboutBox.Dispose();
         }
 
         private void messageBindingSource_AddingNew(object sender, AddingNewEventArgs e)

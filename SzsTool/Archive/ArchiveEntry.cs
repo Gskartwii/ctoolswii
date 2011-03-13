@@ -25,7 +25,7 @@ namespace Chadsoft.CTools.Szs.Archive
     public class ArchiveEntry : IDisposable, IComparable<ArchiveEntry>
     {
         string _name;
-        private bool _disposed;
+        private bool disposed;
 
         public string Name { get { return _name; } set { _name = value; Changed = true; } }
         public string Extension { get { if (Name.Contains(".")) return Name.Substring(Name.LastIndexOf('.') + 1); else return ""; } }
@@ -152,7 +152,7 @@ namespace Chadsoft.CTools.Szs.Archive
 
         protected virtual void Dispose(bool disposing)
         {
-            if (!_disposed)
+            if (!disposed)
             {
                 if (IsFolder)
                 {
@@ -169,7 +169,7 @@ namespace Chadsoft.CTools.Szs.Archive
 
                 Parent = null;
 
-                _disposed = true;
+                disposed = true;
             }
         }
 

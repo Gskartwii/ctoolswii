@@ -346,8 +346,7 @@ namespace Chadsoft.CTools.Szs
                 else
                     stream = dataStream = new MemoryStream();
 
-                Archive.ChangeStream(stream);
-                Archive.Save();
+                Archive.Save(stream);
 
                 stream.Flush();
 
@@ -380,8 +379,7 @@ namespace Chadsoft.CTools.Szs
                 else
                     stream = fileStream = new FileStream(_filePath, FileMode.Create);
 
-                Archive.ChangeStream(stream);
-                Archive.Save();
+                Archive.Save(stream);
 
                 stream.Flush();
             }

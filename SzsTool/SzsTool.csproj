@@ -67,9 +67,10 @@
     <ManifestCertificateThumbprint>E4A71372D6D766D8D79E641313144CBAE3A6380D</ManifestCertificateThumbprint>
   </PropertyGroup>
   <PropertyGroup>
-    <ApplicationIcon>Icon 32.ico</ApplicationIcon>
+    <ApplicationIcon>Properties\Icon 32.ico</ApplicationIcon>
   </PropertyGroup>
   <ItemGroup>
+    <None Include="Properties\app.config" />
     <None Include="Properties\app.manifest" />
   </ItemGroup>
   <ItemGroup>
@@ -169,7 +170,7 @@
     <None Include="Resources\textfield.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Icon 32.ico" />
+    <None Include="Properties\Icon 32.ico" />
   </ItemGroup>
   <ItemGroup>
     <BootstrapperPackage Include=".NETFramework,Version=v4.0,Profile=Client">
@@ -199,7 +200,8 @@
     </PreBuildEvent>
   </PropertyGroup>
   <PropertyGroup>
-    <PostBuildEvent>"C:\Program Files\Microsoft SDKs\Windows\v7.1\Bin\signTool" sign /n "Chadsoft" "$(TargetPath)"</PostBuildEvent>
+    <PostBuildEvent>
+    </PostBuildEvent>
   </PropertyGroup>
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

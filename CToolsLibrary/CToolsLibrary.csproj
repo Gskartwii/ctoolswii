@@ -94,10 +94,10 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="EventArgs.cs" />
     <Compile Include="NewFile.cs" />
-    <Compile Include="Properties\CToolsSettings.Designer.cs">
+    <Compile Include="Properties\Settings.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
-      <DependentUpon>CToolsSettings.settings</DependentUpon>
+      <DependentUpon>Settings.settings</DependentUpon>
     </Compile>
     <Compile Include="Editor.cs" />
     <Compile Include="EditorInstance.cs" />
@@ -146,12 +146,11 @@
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
-    <None Include="app.config" />
-    <None Include="Properties\Chadsoft.CTools.snk" />
     <None Include="Properties\app.config" />
-    <None Include="Properties\CToolsSettings.settings">
+    <None Include="Properties\Chadsoft.CTools.snk" />
+    <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
-      <LastGenOutput>CToolsSettings.Designer.cs</LastGenOutput>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
     </None>
   </ItemGroup>
   <ItemGroup>
@@ -169,7 +168,9 @@
   <ItemGroup>
     <None Include="Resources\arrow_right.png" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <None Include="Resources\transparent.png" />
+  </ItemGroup>
   <ItemGroup>
     <None Include="Resources\layers.png" />
   </ItemGroup>
@@ -230,9 +231,13 @@
   <ItemGroup>
     <None Include="Resources\UpdateRequest.txt" />
   </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Common\" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <PropertyGroup>
-    <PostBuildEvent>"C:\Program Files\Microsoft SDKs\Windows\v7.1\Bin\signTool" sign /n "Chadsoft" "$(TargetPath)"</PostBuildEvent>
+    <PostBuildEvent>
+    </PostBuildEvent>
   </PropertyGroup>
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

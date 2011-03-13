@@ -20,20 +20,20 @@ namespace System.IO
 {
     public static class FileSize
     {
-        static string[] siExtensions = new string[] { " B", " KB", " MB", " GB", " TB" };
-        static string[] binaryExtensions = new string[] { " B", " KiB", " MiB", " GiB", " TiB" };
+        public static string[] SIExtensions = new string[] { " B", " KB", " MB", " GB", " TB" };
+        public static string[] BinaryExtensions = new string[] { " B", " KiB", " MiB", " GiB", " TiB" };
 
-        const int siStep = 1000;
-        const int binaryStep = 1024;
+        public const int SIStep = 1000;
+        public const int BinaryStep = 1024;
 
         private static string[] Extensions
         {
             get
             {
-                if (CToolsSettings.Default.binaryUnits)
-                    return binaryExtensions;
+                if (Settings.Default.binaryUnits)
+                    return BinaryExtensions;
                 else
-                    return siExtensions;
+                    return SIExtensions;
             }
         }
 
@@ -41,10 +41,10 @@ namespace System.IO
         {
             get
             {
-                if (CToolsSettings.Default.binaryUnits)
-                    return binaryStep;
+                if (Settings.Default.binaryUnits)
+                    return BinaryStep;
                 else
-                    return siStep;
+                    return SIStep;
             }
         }
 

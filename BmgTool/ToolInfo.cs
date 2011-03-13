@@ -22,16 +22,16 @@ namespace Chadsoft.CTools.Bmg
 {
     public static class ToolInfo
     {
-        private static Tool tool;
+        private static Tool _tool;
         private static Editor bmgTool;
 
         public static Tool Tool
         {
             get
             {
-                if (tool == null)
+                if (_tool == null)
                     SetupTool();
-                return tool;
+                return _tool;
             }
         }
 
@@ -40,11 +40,11 @@ namespace Chadsoft.CTools.Bmg
             ReadOnlyCollection<FileFormat> formats;
 
             formats = GetFormats();
-            tool = new Tool(
+            _tool = new Tool(
                 "BMG Editor",
                 Program.GetString("AssemblyDescription"), 
                 "Chadderz", 
-                new Version(1,0,0,0),
+                new Version(1,0,1,0),
                 Properties.Resources.ApplicationIcon,
                 GetEditors(formats),
                 formats,
@@ -64,7 +64,7 @@ namespace Chadsoft.CTools.Bmg
         {
             return new ReadOnlyCollection<Editor>(new Editor[]
                 {
-                    bmgTool = new Editor("BMG Editor", Program.GetString("AssemblyDescription"), "Chadderz", new Version(1,0,0,0), Properties.Resources.ApplicationIcon, formats, CreateInstance, RenderPreview),
+                    bmgTool = new Editor("BMG Editor", Program.GetString("AssemblyDescription"), "Chadderz", new Version(1,0,1,0), Properties.Resources.ApplicationIcon, formats, CreateInstance, RenderPreview),
                 });
         }
 
@@ -79,7 +79,7 @@ namespace Chadsoft.CTools.Bmg
 
         private static int BmgFormatMatch(string name, byte[] data, int offset)
         {
-            if (data.Length >= 4 && data[0] == 0x4D && data[1] == 0x45 && data[2] == 0x53 && data[3] == 0x47)
+            if (data.Length >= offset + 4 && data[offset + 0] == 0x4D && data[offset + 1] == 0x45 && data[offset + 2] == 0x53 && data[offset + 3] == 0x47)
                 return 100;
             else
                 return 0;
@@ -121,7 +121,8 @@ namespace Chadsoft.CTools.Bmg
                 if (bmg != null)
                     bmg.Dispose();
             }
-            
+
+            previewFont.Dispose();
         }
     
     }

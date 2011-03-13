@@ -21,7 +21,7 @@ namespace Chadsoft.CTools
 {
     public class FileFormat
     {
-        private FormatMatchDelegate formatMatch;
+        private FormatMatchDelegate _formatMatch;
 
         public virtual string Name { get; protected set; }
         public virtual string Description { get; protected set; }
@@ -30,8 +30,8 @@ namespace Chadsoft.CTools
 
         public virtual int FormatMatch(string name, byte[] data, int offset)
         {
-            if (formatMatch != null)
-                return formatMatch(name, data, offset);
+            if (_formatMatch != null)
+                return _formatMatch(name, data, offset);
             else
                 return 0;
         }
@@ -41,13 +41,13 @@ namespace Chadsoft.CTools
 
         }
 
-        public FileFormat(string name, string description, string category, Image icon, FormatMatchDelegate match)
+        public FileFormat(string name, string description, string category, Image icon, FormatMatchDelegate formatMatch)
         {
             Name = name;
             Description = description;
             Category = category;
             Icon = icon;
-            formatMatch = match;
+            _formatMatch = formatMatch;
         }        
     }
 

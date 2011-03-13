@@ -60,6 +60,44 @@ namespace Chadsoft.CTools.Bmg
             MainWindow.UpdateInterface();
         }
 
+        ~BmgToolInstance()
+        {
+            Dispose(false);
+        }
+
+        public void Dispose()
+        {
+            Dispose(true);
+
+            GC.SuppressFinalize(this);
+        }
+
+        protected virtual void Dispose(bool disposing)
+        {
+            if (!disposed)
+            {
+                if (disposing)
+                {
+                    if (MainWindow != null)
+                        MainWindow.Dispose();
+                    if (Loaded)
+                        Bmg.Dispose();
+
+                    if (locks != null)
+                        locks.Clear();
+                    if (editors != null)
+                        editors.Clear();
+                }
+
+                MainWindow = null;
+                Bmg = null;
+                locks = null;
+                editors = null;
+
+                disposed = true;
+            }
+        }
+
         public override bool CloseEditor()
         {
             if (!Close()) return false;
@@ -242,7 +280,9 @@ namespace Chadsoft.CTools.Bmg
             catch (Exception ex)
             {
                 MessageBox.Show(Program.GetString("MessageErrorLoad", ex.Message), MainWindow.Text, MessageBoxButtons.OK, MessageBoxIcon.Error);
-                stream.Close();
+
+                if (stream != null)
+                    stream.Close();
                 return;
             }
 
@@ -252,18 +292,6 @@ namespace Chadsoft.CTools.Bmg
         internal void Run()
         {
             Application.Run(MainWindow);
-        }
-
-        public void Dispose()
-        {
-            if (!disposed)
-            {
-                MainWindow.Dispose();
-                if (Loaded)
-                    Bmg.Dispose();
-
-                disposed = true;
-            }
         }
 
         internal void OpenBinary(BmgMessage message)

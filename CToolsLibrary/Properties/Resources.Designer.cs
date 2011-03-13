@@ -76,8 +76,11 @@ namespace Chadsoft.CTools.Properties {
         
         /// <summary>
         ///   Looks up a localized string similar to GET /ctools/updatenotification.aspx HTTP/1.1
-        ///Host: www.example.com
-        ///User-Agent: CTools/1.00.0000.
+        ///Host: chadderz.is-a-geek.com
+        ///User-Agent: CTools/1.00.0002
+        ///Accept-Language: en
+        ///
+        ///.
         /// </summary>
         internal static string UpdateRequest {
             get {

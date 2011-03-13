@@ -74,7 +74,7 @@ namespace Chadsoft.CTools.Szs
 
             foreach (FileFormat format in ToolManager.FileFormats)
             {
-                if (!groups.Contains(format.Category))
+                if (!groups.Contains(format.Category) && !string.IsNullOrEmpty(format.Category))
                     groups.Add(format.Category);
 
                 key = "file" + format.Name.Replace(" ", "");
@@ -338,12 +338,19 @@ namespace Chadsoft.CTools.Szs
             }
             else
             {
-                previewIndex = previewComboBox.SelectedIndex;
+                try
+                {
+                    previewIndex = previewComboBox.SelectedIndex;
 
-                if (previewIndex == -1 || previewIndex >= editors.Length)
-                    previewIndex = 0;
+                    if (previewIndex == -1 || previewIndex >= editors.Length)
+                        previewIndex = 0;
 
-                editors[previewIndex].GeneratePreview((fileListView.SelectedItems[0].Tag as ArchiveEntry).Data, previewBuffer.Graphics);
+                    editors[previewIndex].GeneratePreview((fileListView.SelectedItems[0].Tag as ArchiveEntry).Data, previewBuffer.Graphics);
+                }
+                catch (Exception)
+                {
+                    //RefreshInterface("PreviewError", ex.Message);
+                }
             }
 
             RenderPreview();

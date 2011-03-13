@@ -78,6 +78,31 @@ namespace System.IO
             WriteBuffer(count, 1);
         }
 
+        public void Write(sbyte value)
+        {
+            CreateBuffer(1);
+            unchecked
+            {
+                buffer[0] = (byte)value;
+            }
+            WriteBuffer(1, 1);
+        }
+
+        public void Write(sbyte[] value, int offset, int count)
+        {
+            CreateBuffer(count);
+
+            unchecked
+            {
+                for (int i = 0; i < count; i++)
+                {
+                    buffer[i] = (byte)value[i + offset];
+                }
+            }
+
+            WriteBuffer(count, 1);
+        }
+
         public void Write(char value, Encoding encoding)
         {
             int size;
@@ -289,6 +314,31 @@ namespace System.IO
             }
 
             WriteBuffer(size * count, size);
+        }
+
+        public void WritePadding(int multiple, byte padding)
+        {
+            int length = (int)(BaseStream.Position % multiple);
+
+            if (length != 0)
+                while (length != multiple)
+                {
+                    BaseStream.WriteByte(padding);
+                    length++;
+                }
+        }
+
+        public void WritePadding(int multiple, byte padding, long from, int offset)
+        {
+            int length = (int)((BaseStream.Position - from) % multiple);
+            length = (length + offset) % multiple;
+
+            if (length != 0)
+                while (length != multiple)
+                {
+                    BaseStream.WriteByte(padding);
+                    length++;
+                }
         }
 
         public void Close()

@@ -26,10 +26,10 @@ namespace Chadsoft.CTools
             InitializeComponent();
 
             versionLabel.Text = string.Format(versionLabel.Text, ToolManager.CToolsVersion);
-            if (Properties.CToolsSettings.Default.lastTimeUpdate != null && new Version(Properties.CToolsSettings.Default.lastTimeUpdate) > ToolManager.CToolsVersion)
+            if (Properties.Settings.Default.lastTimeUpdate != null && new Version(Properties.Settings.Default.lastTimeUpdate) > ToolManager.CToolsVersion)
             {
                 versionUpdateLabel.Visible = true;
-                versionUpdateLabel.Text = string.Format(versionUpdateLabel.Text, Properties.CToolsSettings.Default.lastTimeUpdate);
+                versionUpdateLabel.Text = string.Format(versionUpdateLabel.Text, Properties.Settings.Default.lastTimeUpdate);
             }
             else
             {

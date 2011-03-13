@@ -62,5 +62,17 @@ namespace Chadsoft.CTools.Properties {
                 this["lastTimeUpdate"] = value;
             }
         }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("http://chadderz.is-a-geek.com/ctools/setup.exe")]
+        public string updateUrl {
+            get {
+                return ((string)(this["updateUrl"]));
+            }
+            set {
+                this["updateUrl"] = value;
+            }
+        }
     }
 }

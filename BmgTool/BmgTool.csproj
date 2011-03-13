@@ -37,7 +37,7 @@
     <StartupObject>Chadsoft.CTools.Bmg.Program</StartupObject>
   </PropertyGroup>
   <PropertyGroup>
-    <ApplicationIcon>Icon32.ico</ApplicationIcon>
+    <ApplicationIcon>Properties\Icon32.ico</ApplicationIcon>
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
@@ -88,7 +88,7 @@
       <DesignTime>True</DesignTime>
     </Compile>
     <EmbeddedResource Include="Properties\StringResource.resx" />
-    <None Include="app.config" />
+    <None Include="Properties\app.config" />
     <None Include="Properties\DataSources\BmgMessage.datasource" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
@@ -142,11 +142,12 @@
     <None Include="Resources\cross.png" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Icon32.ico" />
+    <Content Include="Properties\Icon32.ico" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <PropertyGroup>
-    <PostBuildEvent>"C:\Program Files\Microsoft SDKs\Windows\v7.1\Bin\signTool" sign /n "Chadsoft" "$(TargetPath)"</PostBuildEvent>
+    <PostBuildEvent>
+    </PostBuildEvent>
   </PropertyGroup>
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

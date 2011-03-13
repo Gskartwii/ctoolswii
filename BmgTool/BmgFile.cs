@@ -22,6 +22,8 @@ namespace Chadsoft.CTools.Bmg
 {
     public class BmgFile : IDisposable 
     {
+        bool disposed;
+
         public BmgHeader Header { get; private set; }
         public Inf1 Inf1 { get; private set; }
         public Dat1 Dat1 { get; private set; }
@@ -39,6 +41,7 @@ namespace Chadsoft.CTools.Bmg
 
         public BmgFile(Stream input)
         {
+            BmgMessage message;
             EndianBinaryReader reader;
 
             reader = new EndianBinaryReader(input);
@@ -56,13 +59,42 @@ namespace Chadsoft.CTools.Bmg
 
             for (int i = 0; i < Inf1.Messages; i++)
             {
-                Messages.Add(new BmgMessage(this, i));
-            }
+                message = new BmgMessage(this, i);
+                InsertMessage(Messages, message);
+            }            
+        }
+
+        ~BmgFile()
+        {
+            Dispose(false);
         }
 
         public void Dispose()
         {
+            Dispose(true);
 
+            GC.SuppressFinalize(this);
+        }
+
+        protected virtual void Dispose(bool disposing)
+        {
+            if (!disposed)
+            {
+                if (disposing)
+                {
+                    if (Messages != null) 
+                        Messages.Clear();
+                }
+
+                Messages = null;
+                Inf1 = null;
+                Dat1 = null;
+                Mid1 = null;
+                Header = null;
+                Name = null;
+
+                disposed = true;
+            }
         }
 
         public void Save(Stream stream)
@@ -78,6 +110,25 @@ namespace Chadsoft.CTools.Bmg
             Dat1.Write(writer);
             if (Header.Sections >= 3)
                 Mid1.Write(writer);
+        }
+
+        private static void InsertMessage(Collection<BmgMessage> Messages, BmgMessage message)
+        {
+            bool added;
+
+            added = false;
+            for (int i = 0; i < Messages.Count; i++)
+            {
+                if (Messages[i].Id > message.Id)
+                {
+                    added = true;
+                    Messages.Insert(i, message);
+                    break;
+                }
+            }
+
+            if (!added)
+                Messages.Add(message);
         }
 
         private void Recalculate()
@@ -96,6 +147,9 @@ namespace Chadsoft.CTools.Bmg
 
             foreach (BmgMessage message in Messages)
             {
+                if (message.Data == null)
+                    message.Data = new int[Inf1.Stride >> 2];
+
                 if (string.IsNullOrEmpty(message.Message))
                 {
                     message.Data[0] = 0;
@@ -111,6 +165,7 @@ namespace Chadsoft.CTools.Bmg
             output.Write(new byte[0x1F], 0, (int)(0x20 - ((output.Length + 8) % 0x20)) % 0x20);
             Dat1.Data = output.ToArray();
             Dat1.SectionSize = Dat1.Data.Length + 8;
+            output.Close();
 
             if (Header.Sections >= 3)
             {

@@ -24,14 +24,14 @@ namespace System.IO.Compression
     public class Yaz0Stream : Stream
     {
         private static int LookBackCache = -1;
-        private static int lookBack { get { if (LookBackCache == -1) LookBackCache = Chadsoft.CTools.Properties.CToolsSettings.Default.compressionLookBack; return LookBackCache; } }
+        private static int lookBack { get { if (LookBackCache == -1) LookBackCache = Chadsoft.CTools.Properties.Settings.Default.compressionLookBack; return LookBackCache; } }
 
         private const int threadChunk = 0x10000;
         private MemoryStream dataBuffer;
         private EndianBinaryReader reader;
         private EndianBinaryWriter writer;
-        private int _codeBits, _toCopy, _copyPosition, _position;
-        private byte _codeByte;
+        private int codeBits, toCopy, copyPosition, _position;
+        private byte codeByte;
         private byte[] writeBuffer;
         private List<Contraction>[] contractions;
 
@@ -233,7 +233,7 @@ namespace System.IO.Compression
             writer.Write(0);
             writer.Write(0);
 
-            _toCopy = 1;
+            toCopy = 1;
 
             HasHeader = true;
         }
@@ -292,43 +292,43 @@ namespace System.IO.Compression
 
             for (int read = 0; read < count; read++)
             {
-                if (_toCopy > 0)
+                if (toCopy > 0)
                 {
-                    dataBuffer.Seek(_copyPosition, SeekOrigin.Begin);
+                    dataBuffer.Seek(copyPosition, SeekOrigin.Begin);
                     current = (byte)dataBuffer.ReadByte();
                     dataBuffer.Seek(_position, SeekOrigin.Begin);
                     dataBuffer.WriteByte(current); 
                     buffer[offset] = current;
 
-                    _toCopy--; 
+                    toCopy--; 
                     offset++; 
                     _position++;
-                    _copyPosition++;
+                    copyPosition++;
                 }
                 else
                 {
-                    if (_codeBits == 0)
+                    if (codeBits == 0)
                     {
-                        _codeByte = (byte)BaseStream.ReadByte();
-                        _codeBits = 8;
+                        codeByte = (byte)BaseStream.ReadByte();
+                        codeBits = 8;
                     }
 
-                    if ((_codeByte & 0x80) == 0)
+                    if ((codeByte & 0x80) == 0)
                     {
                         code1 = (byte)BaseStream.ReadByte();
                         code2 = (byte)BaseStream.ReadByte();
 
-                        _copyPosition = _position -(((code1 & 0xf) << 8 | code2) + 1);
+                        copyPosition = _position -(((code1 & 0xf) << 8 | code2) + 1);
 
                         if ((code1 & 0xF0) == 0)
                         {
                             code3 = (byte)BaseStream.ReadByte();
 
-                            _toCopy = code3 + 0x12;
+                            toCopy = code3 + 0x12;
                         }
                         else
                         {
-                            _toCopy = (code1 >> 4) + 2;
+                            toCopy = (code1 >> 4) + 2;
                         }
 
                         read--;
@@ -342,8 +342,8 @@ namespace System.IO.Compression
                         offset++; _position++;
                     }
 
-                    _codeByte <<= 1;
-                    _codeBits--;
+                    codeByte <<= 1;
+                    codeBits--;
                 }
             }
 
@@ -375,97 +375,12 @@ namespace System.IO.Compression
 
         public override void Write(byte[] buffer, int offset, int count)
         {
-            //int dist, dist2, run, bestRun, bestOffset, j;
-            //byte current;
-
             if (!CanWrite || HasHeader) throw new InvalidOperationException();
 
             if (count == 0) return;
 
             dataBuffer.Write(buffer, offset, count);
             _position += count;
-
-            //for (int write = 0; write < count; write++)
-            //{
-            //    if (_codeBits == 8)
-            //    {
-            //        BaseStream.Write(writeBuffer, 0, _toCopy);
-            //        _toCopy = 1;
-            //        _codeBits = 0;
-            //        writeBuffer[0] = 0;
-            //    }
-
-            //    bestRun = 0;
-            //    bestOffset = 0;
-
-            //    dist = -(int)Math.Min(0x3F, Position);
-
-            //    for (int i = dist; i < 0; i++)
-            //    {
-            //        dataBuffer.Seek(i + Position, SeekOrigin.Begin);
-            //        run = 0;
-            //        j = write;
-            //        dist2 = i;
-
-            //        do
-            //        {
-            //            if (dist2 < 0)
-            //                current = (byte)dataBuffer.ReadByte();
-            //            else
-            //                current = buffer[offset + write + dist2];
-
-            //            dist2++; run++;
-            //        } while (buffer[j++] == current && j < offset + count && run < 0x111);
-
-            //        if (run > bestRun + 1)
-            //        {
-            //            bestRun = run - 1;
-            //            bestOffset = i + _position;
-            //        }
-
-            //        if (run == 0x111)
-            //            break; 
-            //    }
-
-            //    if (bestRun >= 3)
-            //    {
-            //        for (int i = 0; i < bestRun; i++)
-            //        {
-            //            dataBuffer.Seek(bestOffset + i, SeekOrigin.Begin);
-            //            current = (byte)dataBuffer.ReadByte();
-            //            dataBuffer.Seek(_position + i, SeekOrigin.Begin);
-            //            dataBuffer.WriteByte(current);
-            //        }
-            //        _position += bestRun;
-
-            //        bestOffset = -bestOffset - 1;
-                    
-            //        if (bestRun >= 0x12)
-            //        {
-            //            writeBuffer[_toCopy++] = (byte)(bestOffset >> 8);
-            //            writeBuffer[_toCopy++] = (byte)(bestOffset & 0xFF);
-            //            writeBuffer[_toCopy++] = (byte)(bestRun - 0x12);
-            //        }
-            //        else
-            //        {
-            //            writeBuffer[_toCopy++] = (byte)((bestOffset >> 8) | ((bestRun - 2) << 4));
-            //            writeBuffer[_toCopy++] = (byte)(bestOffset & 0xFF);
-            //        }
-
-            //        _codeBits++;
-            //        write += bestRun - 1;
-            //    }
-            //    else
-            //    {
-            //        current = buffer[write + offset];
-            //        writeBuffer[_toCopy++] = current;
-            //        writeBuffer[0] = (byte)(writeBuffer[0] | (1 << (8 - ++_codeBits)));
-            //        dataBuffer.Seek(_position, SeekOrigin.Begin);
-            //        dataBuffer.WriteByte(current);
-            //        _position++;
-            //    }
-
-            //}
         }
 
         private struct Contraction

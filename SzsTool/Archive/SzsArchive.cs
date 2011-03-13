@@ -23,12 +23,8 @@ namespace Chadsoft.CTools.Szs.Archive
 {
     public class SzsArchive : IDisposable
     {
-        private Stream _stream;
-        private EndianBinaryReader _reader;
-        private EndianBinaryWriter _writer;
-        private bool _disposed;
+        private bool disposed;
 
-        public Stream Stream { get { return _stream; } set { ChangeStream(value); } }
         public string Name { get; set; }
         public int Size { get; private set; }
         public ArchiveHeader Header { get; private set; }
@@ -42,14 +38,16 @@ namespace Chadsoft.CTools.Szs.Archive
 
         public SzsArchive(Stream stream, string name, bool loadData)
         {
-            ChangeStream(stream);
+            EndianBinaryReader reader;
+
+            reader = new EndianBinaryReader(stream);
 
             Name = name;
-            Header = new ArchiveHeader(_reader);
-            Root = ArchiveEntry.LoadTree(_reader, Header);
+            Header = new ArchiveHeader(reader);
+            Root = ArchiveEntry.LoadTree(reader, Header);
 
             if (loadData) 
-                LoadData(Root);
+                LoadData(Root, stream);
         }
 
         ~SzsArchive()
@@ -65,24 +63,22 @@ namespace Chadsoft.CTools.Szs.Archive
 
         protected virtual void Dispose(bool disposing)
         {
-            if (!_disposed)
+            if (!disposed)
             {
                 if (disposing)
                 {
-                    if (_stream != null) _stream.Dispose();
-                    if (_reader != null) _reader.Dispose();
-                    if (_writer != null) _writer.Dispose();
                     Header = null;
                 }
+
                 if (Root != null)
                     Root.Dispose();
                 Root = null;
 
-                _disposed = true;
+                disposed = true;
             }
         }
 
-        private void LoadData(ArchiveEntry Root)
+        private void LoadData(ArchiveEntry Root, Stream stream)
         {
             List<ArchiveEntry> entries;
             int location, first, last, start, offset, run;
@@ -91,14 +87,14 @@ namespace Chadsoft.CTools.Szs.Archive
             entries = Root.GetFiles();
             entries.Sort();
 
-            location = (int)_stream.Position;
+            location = (int)stream.Position;
             first = last = 0;
 
             current = new byte[0x100];
 
-            while (first < entries.Count && location < _stream.Length)
+            while (first < entries.Count && location < stream.Length)
             {
-                _stream.Read(current, 0, current.Length);
+                stream.Read(current, 0, current.Length);
 
                 while (last < entries.Count && entries[last].FileOffset <= location + current.Length)
                     last++;
@@ -120,35 +116,9 @@ namespace Chadsoft.CTools.Szs.Archive
             }
         }
 
-        public void ChangeStream(Stream stream)
+        public void Save(Stream stream)
         {
-            if (_stream != null)
-            {
-                _stream.Dispose();
-                if (_reader != null) _reader.Dispose();
-                if (_writer != null) _writer.Dispose();
-
-                Changed = true;
-            }
-
-            _stream = stream;
-
-            if (_stream != null)
-            {
-                if (_stream.CanRead)
-                    _reader = new EndianBinaryReader(_stream);
-                else
-                    _reader = null;
-
-                if (_stream.CanWrite)
-                    _writer = new EndianBinaryWriter(_stream);
-                else
-                    _writer = null;
-            }
-        }
-
-        public void Save()
-        {
+            EndianBinaryWriter writer; 
             string nameTable;
             int id, offset;
 
@@ -161,13 +131,14 @@ namespace Chadsoft.CTools.Szs.Archive
 
             Root.BuildFileTable(ref offset);
 
-            Header.Save(_writer);
-            Root.Save(_writer);
-            _writer.Write(nameTable, Encoding.ASCII, false);
+            writer = new EndianBinaryWriter(stream);
+            Header.Save(writer);
+            Root.Save(writer);
+            writer.Write(nameTable, Encoding.ASCII, false);
 
-            while (Stream.Position % 0x20 != 0)
-                Stream.WriteByte(0);
-            Root.SaveData(Stream);
+            writer.WritePadding(0x20, 0);
+
+            Root.SaveData(stream);
 
             Changed = false;
         }

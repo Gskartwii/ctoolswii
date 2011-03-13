@@ -136,6 +136,7 @@ namespace Chadsoft.CTools.HexEditor
             // mainVScrollBar
             // 
             this.mainVScrollBar.Dock = System.Windows.Forms.DockStyle.Right;
+            this.mainVScrollBar.LargeChange = 16;
             this.mainVScrollBar.Location = new System.Drawing.Point(607, 0);
             this.mainVScrollBar.Name = "mainVScrollBar";
             this.mainVScrollBar.Size = new System.Drawing.Size(17, 394);

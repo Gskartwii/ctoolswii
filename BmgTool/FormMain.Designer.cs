@@ -46,7 +46,6 @@ namespace Chadsoft.CTools.Bmg
         {
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormMain));
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             this.mainToolStripContainer = new System.Windows.Forms.ToolStripContainer();
             this.mainStatusStrip = new System.Windows.Forms.StatusStrip();
             this.messagesMessageSplitContainer = new System.Windows.Forms.SplitContainer();
@@ -91,7 +90,7 @@ namespace Chadsoft.CTools.Bmg
             this.FileOpenFileDialog = new System.Windows.Forms.OpenFileDialog();
             this.FileSaveFileDialog = new System.Windows.Forms.SaveFileDialog();
             this.idDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.messsageDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.messageDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.mainToolStripContainer.BottomToolStripPanel.SuspendLayout();
             this.mainToolStripContainer.ContentPanel.SuspendLayout();
             this.mainToolStripContainer.TopToolStripPanel.SuspendLayout();
@@ -118,11 +117,11 @@ namespace Chadsoft.CTools.Bmg
             // mainToolStripContainer.ContentPanel
             // 
             this.mainToolStripContainer.ContentPanel.Controls.Add(this.messagesMessageSplitContainer);
-            this.mainToolStripContainer.ContentPanel.Size = new System.Drawing.Size(784, 491);
+            this.mainToolStripContainer.ContentPanel.Size = new System.Drawing.Size(792, 502);
             this.mainToolStripContainer.Dock = System.Windows.Forms.DockStyle.Fill;
             this.mainToolStripContainer.Location = new System.Drawing.Point(0, 0);
             this.mainToolStripContainer.Name = "mainToolStripContainer";
-            this.mainToolStripContainer.Size = new System.Drawing.Size(784, 562);
+            this.mainToolStripContainer.Size = new System.Drawing.Size(792, 573);
             this.mainToolStripContainer.TabIndex = 0;
             this.mainToolStripContainer.Text = "toolStripContainer1";
             // 
@@ -136,7 +135,7 @@ namespace Chadsoft.CTools.Bmg
             this.mainStatusStrip.Dock = System.Windows.Forms.DockStyle.None;
             this.mainStatusStrip.Location = new System.Drawing.Point(0, 0);
             this.mainStatusStrip.Name = "mainStatusStrip";
-            this.mainStatusStrip.Size = new System.Drawing.Size(784, 22);
+            this.mainStatusStrip.Size = new System.Drawing.Size(792, 22);
             this.mainStatusStrip.TabIndex = 0;
             // 
             // messagesMessageSplitContainer
@@ -165,8 +164,8 @@ namespace Chadsoft.CTools.Bmg
             this.messagesMessageSplitContainer.Panel2.Controls.Add(this.messageHeaderLabel);
             this.messagesMessageSplitContainer.Panel2.Enabled = false;
             this.messagesMessageSplitContainer.Panel2MinSize = 205;
-            this.messagesMessageSplitContainer.Size = new System.Drawing.Size(784, 491);
-            this.messagesMessageSplitContainer.SplitterDistance = 273;
+            this.messagesMessageSplitContainer.Size = new System.Drawing.Size(792, 502);
+            this.messagesMessageSplitContainer.SplitterDistance = 284;
             this.messagesMessageSplitContainer.TabIndex = 0;
             // 
             // messageDataGridView
@@ -176,14 +175,14 @@ namespace Chadsoft.CTools.Bmg
             this.messageDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.messageDataGridView.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.idDataGridViewTextBoxColumn,
-            this.messsageDataGridViewTextBoxColumn});
+            this.messageDataGridViewTextBoxColumn});
             this.messageDataGridView.DataSource = this.messageBindingSource;
             this.messageDataGridView.Dock = System.Windows.Forms.DockStyle.Fill;
             this.messageDataGridView.Location = new System.Drawing.Point(0, 48);
             this.messageDataGridView.MultiSelect = false;
             this.messageDataGridView.Name = "messageDataGridView";
             this.messageDataGridView.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.AutoSizeToDisplayedHeaders;
-            this.messageDataGridView.Size = new System.Drawing.Size(784, 225);
+            this.messageDataGridView.Size = new System.Drawing.Size(792, 236);
             this.messageDataGridView.TabIndex = 1;
             this.messageDataGridView.CellBeginEdit += new System.Windows.Forms.DataGridViewCellCancelEventHandler(this.messageDataGridView_CellBeginEdit);
             this.messageDataGridView.CellEndEdit += new System.Windows.Forms.DataGridViewCellEventHandler(this.messageDataGridView_CellEndEdit);
@@ -223,7 +222,7 @@ namespace Chadsoft.CTools.Bmg
             this.messageBindingNavigator.MovePreviousItem = this.bindingNavigatorMovePreviousItem;
             this.messageBindingNavigator.Name = "messageBindingNavigator";
             this.messageBindingNavigator.PositionItem = this.bindingNavigatorPositionItem;
-            this.messageBindingNavigator.Size = new System.Drawing.Size(784, 25);
+            this.messageBindingNavigator.Size = new System.Drawing.Size(792, 25);
             this.messageBindingNavigator.TabIndex = 2;
             this.messageBindingNavigator.Text = "bindingNavigator1";
             // 
@@ -239,7 +238,7 @@ namespace Chadsoft.CTools.Bmg
             // bindingNavigatorCountItem
             // 
             this.bindingNavigatorCountItem.Name = "bindingNavigatorCountItem";
-            this.bindingNavigatorCountItem.Size = new System.Drawing.Size(35, 22);
+            this.bindingNavigatorCountItem.Size = new System.Drawing.Size(36, 22);
             this.bindingNavigatorCountItem.Text = "of {0}";
             this.bindingNavigatorCountItem.ToolTipText = "Total number of items";
             // 
@@ -320,7 +319,7 @@ namespace Chadsoft.CTools.Bmg
             this.messagesHeaderLabel.Location = new System.Drawing.Point(0, 0);
             this.messagesHeaderLabel.Name = "messagesHeaderLabel";
             this.messagesHeaderLabel.Padding = new System.Windows.Forms.Padding(5, 0, 0, 0);
-            this.messagesHeaderLabel.Size = new System.Drawing.Size(784, 23);
+            this.messagesHeaderLabel.Size = new System.Drawing.Size(792, 23);
             this.messagesHeaderLabel.TabIndex = 0;
             this.messagesHeaderLabel.Text = "Messages";
             this.messagesHeaderLabel.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -328,7 +327,7 @@ namespace Chadsoft.CTools.Bmg
             // updateButton
             // 
             this.updateButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.updateButton.Location = new System.Drawing.Point(411, 159);
+            this.updateButton.Location = new System.Drawing.Point(419, 159);
             this.updateButton.Name = "updateButton";
             this.updateButton.Size = new System.Drawing.Size(75, 23);
             this.updateButton.TabIndex = 6;
@@ -339,7 +338,7 @@ namespace Chadsoft.CTools.Bmg
             // hexEditButton
             // 
             this.hexEditButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.hexEditButton.Location = new System.Drawing.Point(492, 159);
+            this.hexEditButton.Location = new System.Drawing.Point(500, 159);
             this.hexEditButton.Name = "hexEditButton";
             this.hexEditButton.Size = new System.Drawing.Size(75, 23);
             this.hexEditButton.TabIndex = 6;
@@ -351,7 +350,7 @@ namespace Chadsoft.CTools.Bmg
             // 
             this.placeholderExplanationLabel.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.placeholderExplanationLabel.DataBindings.Add(new System.Windows.Forms.Binding("Visible", global::Chadsoft.CTools.Bmg.Properties.Settings.Default, "ReplaceSequences", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
-            this.placeholderExplanationLabel.Location = new System.Drawing.Point(408, 47);
+            this.placeholderExplanationLabel.Location = new System.Drawing.Point(416, 47);
             this.placeholderExplanationLabel.Name = "placeholderExplanationLabel";
             this.placeholderExplanationLabel.Size = new System.Drawing.Size(335, 109);
             this.placeholderExplanationLabel.TabIndex = 5;
@@ -365,7 +364,7 @@ namespace Chadsoft.CTools.Bmg
                         | System.Windows.Forms.AnchorStyles.Right)));
             this.messageRichTextBox.Location = new System.Drawing.Point(12, 47);
             this.messageRichTextBox.Name = "messageRichTextBox";
-            this.messageRichTextBox.Size = new System.Drawing.Size(390, 150);
+            this.messageRichTextBox.Size = new System.Drawing.Size(398, 150);
             this.messageRichTextBox.TabIndex = 4;
             this.messageRichTextBox.Text = "";
             this.messageRichTextBox.Leave += new System.EventHandler(this.messageRichTextBox_Leave);
@@ -387,7 +386,7 @@ namespace Chadsoft.CTools.Bmg
             this.messageHeaderLabel.Location = new System.Drawing.Point(0, 0);
             this.messageHeaderLabel.Name = "messageHeaderLabel";
             this.messageHeaderLabel.Padding = new System.Windows.Forms.Padding(5, 0, 0, 0);
-            this.messageHeaderLabel.Size = new System.Drawing.Size(784, 23);
+            this.messageHeaderLabel.Size = new System.Drawing.Size(792, 23);
             this.messageHeaderLabel.TabIndex = 1;
             this.messageHeaderLabel.Text = "Message";
             this.messageHeaderLabel.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -401,7 +400,7 @@ namespace Chadsoft.CTools.Bmg
             this.helpToolStripMenuItem});
             this.mainMenuStrip.Location = new System.Drawing.Point(0, 0);
             this.mainMenuStrip.Name = "mainMenuStrip";
-            this.mainMenuStrip.Size = new System.Drawing.Size(784, 24);
+            this.mainMenuStrip.Size = new System.Drawing.Size(792, 24);
             this.mainMenuStrip.TabIndex = 0;
             this.mainMenuStrip.Text = "menuStrip1";
             // 
@@ -416,7 +415,7 @@ namespace Chadsoft.CTools.Bmg
             this.toolStripSeparator2,
             this.exitToolStripMenuItem});
             this.fileToolStripMenuItem.Name = "fileToolStripMenuItem";
-            this.fileToolStripMenuItem.Size = new System.Drawing.Size(37, 20);
+            this.fileToolStripMenuItem.Size = new System.Drawing.Size(35, 20);
             this.fileToolStripMenuItem.Text = "&File";
             // 
             // newToolStripMenuItem
@@ -424,7 +423,7 @@ namespace Chadsoft.CTools.Bmg
             this.newToolStripMenuItem.Image = global::Chadsoft.CTools.Bmg.Properties.Resources.page;
             this.newToolStripMenuItem.Name = "newToolStripMenuItem";
             this.newToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.N)));
-            this.newToolStripMenuItem.Size = new System.Drawing.Size(146, 22);
+            this.newToolStripMenuItem.Size = new System.Drawing.Size(140, 22);
             this.newToolStripMenuItem.Text = "&New";
             this.newToolStripMenuItem.Click += new System.EventHandler(this.newToolStripMenuItem_Click);
             // 
@@ -433,40 +432,40 @@ namespace Chadsoft.CTools.Bmg
             this.openToolStripMenuItem.Image = global::Chadsoft.CTools.Bmg.Properties.Resources.folder;
             this.openToolStripMenuItem.Name = "openToolStripMenuItem";
             this.openToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.O)));
-            this.openToolStripMenuItem.Size = new System.Drawing.Size(146, 22);
+            this.openToolStripMenuItem.Size = new System.Drawing.Size(140, 22);
             this.openToolStripMenuItem.Text = "&Open";
             this.openToolStripMenuItem.Click += new System.EventHandler(this.openToolStripMenuItem_Click);
             // 
             // toolStripSeparator1
             // 
             this.toolStripSeparator1.Name = "toolStripSeparator1";
-            this.toolStripSeparator1.Size = new System.Drawing.Size(143, 6);
+            this.toolStripSeparator1.Size = new System.Drawing.Size(137, 6);
             // 
             // saveToolStripMenuItem
             // 
             this.saveToolStripMenuItem.Image = global::Chadsoft.CTools.Bmg.Properties.Resources.disk;
             this.saveToolStripMenuItem.Name = "saveToolStripMenuItem";
             this.saveToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.S)));
-            this.saveToolStripMenuItem.Size = new System.Drawing.Size(146, 22);
+            this.saveToolStripMenuItem.Size = new System.Drawing.Size(140, 22);
             this.saveToolStripMenuItem.Text = "&Save";
             this.saveToolStripMenuItem.Click += new System.EventHandler(this.saveToolStripMenuItem_Click);
             // 
             // saveAsToolStripMenuItem
             // 
             this.saveAsToolStripMenuItem.Name = "saveAsToolStripMenuItem";
-            this.saveAsToolStripMenuItem.Size = new System.Drawing.Size(146, 22);
+            this.saveAsToolStripMenuItem.Size = new System.Drawing.Size(140, 22);
             this.saveAsToolStripMenuItem.Text = "Save As";
             this.saveAsToolStripMenuItem.Click += new System.EventHandler(this.saveAsToolStripMenuItem_Click);
             // 
             // toolStripSeparator2
             // 
             this.toolStripSeparator2.Name = "toolStripSeparator2";
-            this.toolStripSeparator2.Size = new System.Drawing.Size(143, 6);
+            this.toolStripSeparator2.Size = new System.Drawing.Size(137, 6);
             // 
             // exitToolStripMenuItem
             // 
             this.exitToolStripMenuItem.Name = "exitToolStripMenuItem";
-            this.exitToolStripMenuItem.Size = new System.Drawing.Size(146, 22);
+            this.exitToolStripMenuItem.Size = new System.Drawing.Size(140, 22);
             this.exitToolStripMenuItem.Text = "Exit";
             this.exitToolStripMenuItem.Click += new System.EventHandler(this.exitToolStripMenuItem_Click);
             // 
@@ -475,13 +474,13 @@ namespace Chadsoft.CTools.Bmg
             this.toolsToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.optionsToolStripMenuItem});
             this.toolsToolStripMenuItem.Name = "toolsToolStripMenuItem";
-            this.toolsToolStripMenuItem.Size = new System.Drawing.Size(48, 20);
+            this.toolsToolStripMenuItem.Size = new System.Drawing.Size(44, 20);
             this.toolsToolStripMenuItem.Text = "&Tools";
             // 
             // optionsToolStripMenuItem
             // 
             this.optionsToolStripMenuItem.Name = "optionsToolStripMenuItem";
-            this.optionsToolStripMenuItem.Size = new System.Drawing.Size(116, 22);
+            this.optionsToolStripMenuItem.Size = new System.Drawing.Size(111, 22);
             this.optionsToolStripMenuItem.Text = "Options";
             this.optionsToolStripMenuItem.Click += new System.EventHandler(this.optionsToolStripMenuItem_Click);
             // 
@@ -490,13 +489,13 @@ namespace Chadsoft.CTools.Bmg
             this.helpToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.aboutToolStripMenuItem});
             this.helpToolStripMenuItem.Name = "helpToolStripMenuItem";
-            this.helpToolStripMenuItem.Size = new System.Drawing.Size(44, 20);
+            this.helpToolStripMenuItem.Size = new System.Drawing.Size(40, 20);
             this.helpToolStripMenuItem.Text = "&Help";
             // 
             // aboutToolStripMenuItem
             // 
             this.aboutToolStripMenuItem.Name = "aboutToolStripMenuItem";
-            this.aboutToolStripMenuItem.Size = new System.Drawing.Size(116, 22);
+            this.aboutToolStripMenuItem.Size = new System.Drawing.Size(115, 22);
             this.aboutToolStripMenuItem.Text = "&About...";
             this.aboutToolStripMenuItem.Click += new System.EventHandler(this.aboutToolStripMenuItem_Click);
             // 
@@ -510,7 +509,7 @@ namespace Chadsoft.CTools.Bmg
             this.saveToolStripButton});
             this.mainToolStrip.Location = new System.Drawing.Point(0, 24);
             this.mainToolStrip.Name = "mainToolStrip";
-            this.mainToolStrip.Size = new System.Drawing.Size(784, 25);
+            this.mainToolStrip.Size = new System.Drawing.Size(792, 25);
             this.mainToolStrip.Stretch = true;
             this.mainToolStrip.TabIndex = 1;
             // 
@@ -558,21 +557,18 @@ namespace Chadsoft.CTools.Bmg
             this.idDataGridViewTextBoxColumn.HeaderText = "ID";
             this.idDataGridViewTextBoxColumn.Name = "idDataGridViewTextBoxColumn";
             // 
-            // messsageDataGridViewTextBoxColumn
+            // messageDataGridViewTextBoxColumn
             // 
-            this.messsageDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.messsageDataGridViewTextBoxColumn.DataPropertyName = "Messsage";
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.TopLeft;
-            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.messsageDataGridViewTextBoxColumn.DefaultCellStyle = dataGridViewCellStyle1;
-            this.messsageDataGridViewTextBoxColumn.HeaderText = "Message";
-            this.messsageDataGridViewTextBoxColumn.Name = "messsageDataGridViewTextBoxColumn";
+            this.messageDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.messageDataGridViewTextBoxColumn.DataPropertyName = "Message";
+            this.messageDataGridViewTextBoxColumn.HeaderText = "Message";
+            this.messageDataGridViewTextBoxColumn.Name = "messageDataGridViewTextBoxColumn";
             // 
             // FormMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(784, 562);
+            this.ClientSize = new System.Drawing.Size(792, 573);
             this.Controls.Add(this.mainToolStripContainer);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MainMenuStrip = this.mainMenuStrip;
@@ -652,7 +648,7 @@ namespace Chadsoft.CTools.Bmg
         private System.Windows.Forms.Button updateButton;
         private System.Windows.Forms.Button hexEditButton;
         private System.Windows.Forms.DataGridViewTextBoxColumn idDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn messsageDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn messageDataGridViewTextBoxColumn;
     }
 }
 

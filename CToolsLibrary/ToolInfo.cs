@@ -24,16 +24,16 @@ namespace Chadsoft.CTools
 {
     public static class ToolInfo
     {
-        private static Tool tool;
+        private static Tool _tool;
         private static Editor binaryEditor;
 
         public static Tool Tool
         {
             get
             {
-                if (tool == null)
+                if (_tool == null)
                     SetupTool();
-                return tool;
+                return _tool;
             }
         }
 
@@ -42,11 +42,11 @@ namespace Chadsoft.CTools
             ReadOnlyCollection<FileFormat> formats;
 
             formats = GetFormats();
-            tool = new Tool(
+            _tool = new Tool(
                 "CToolsLibrary",
                 ResourceSet.AssemblyDescription,
                 "Chadderz", 
-                new Version(1,0,4,0),
+                new Version(1,0,5,0),
                 ResourceSet.AssemblyImage,
                 GetEditors(formats),
                 formats,
@@ -69,17 +69,17 @@ namespace Chadsoft.CTools
                     new DummyFileFormat(ResourceSet.FormatNameBrfnt, ResourceSet.FormatDescriptionBrfnt, ResourceSet.FormatCategoryFonts, ResourceSet.FormatImageBrfnt, new string[] { ".brfnt" }),
                     new DummyFileFormat(ResourceSet.FormatNameBrlan, ResourceSet.FormatDescriptionBrlan, ResourceSet.FormatCategoryAnimations, ResourceSet.FormatImageBrlan, new string[] { ".brlan" }),
                     new DummyFileFormat(ResourceSet.FormatNameBrlyt, ResourceSet.FormatDescriptionBrlyt, ResourceSet.FormatCategoryLayouts, ResourceSet.FormatImageBrlyt, new string[] { ".brlyt" }),
-                    new DummyFileFormat(ResourceSet.FormatNameBrres, ResourceSet.FormatDescriptionBrres, ResourceSet.FormatCategoryModels, ResourceSet.FormatImageBrres, new string[] { ".brres" }),
+                    // new DummyFileFormat(ResourceSet.FormatNameBrres, ResourceSet.FormatDescriptionBrres, ResourceSet.FormatCategoryModels, ResourceSet.FormatImageBrres, new string[] { ".brres" }),
                     new DummyFileFormat(ResourceSet.FormatNameBrstm, ResourceSet.FormatDescriptionBrstm, ResourceSet.FormatCategoryMusic, ResourceSet.FormatImageSound, new string[] { ".brstm" }),
                     new DummyFileFormat(ResourceSet.FormatNameBwav, ResourceSet.FormatDescriptionBwav, ResourceSet.FormatCategoryMusic, ResourceSet.FormatImageSound, new string[] { ".bwav" }),
                     new DummyFileFormat(ResourceSet.FormatNameMid, ResourceSet.FormatDescriptionMid, ResourceSet.FormatCategoryMusic, ResourceSet.FormatImageSound, new string[] { ".mid", ".midi" }),
-                    new DummyFileFormat(ResourceSet.FormatNameBti, ResourceSet.FormatDescriptionBti, ResourceSet.FormatCategoryImages, ResourceSet.FormatImageBti, new string[] { ".bti", ".btienv", ".btimat" }),
+                    // new DummyFileFormat(ResourceSet.FormatNameBti, ResourceSet.FormatDescriptionBti, ResourceSet.FormatCategoryImages, ResourceSet.FormatImageBti, new string[] { ".bti", ".btienv", ".btimat" }),
                     new DummyFileFormat(ResourceSet.FormatNameCsv, ResourceSet.FormatDescriptionCsv, ResourceSet.FormatCategoryData, ResourceSet.FormatImageBinary, new string[] { ".csv" }),
                     new DummyFileFormat(ResourceSet.FormatNameKcl, ResourceSet.FormatDescriptionKcl, ResourceSet.FormatCategoryData, ResourceSet.FormatImageKcl, new string[] { ".kcl" }),
                     new DummyFileFormat(ResourceSet.FormatNameKmp, ResourceSet.FormatDescriptionKmp, ResourceSet.FormatCategoryData, ResourceSet.FormatImageKmp, new string[] { ".kmp" }),
                     new DummyFileFormat(ResourceSet.FormatNameRsca, ResourceSet.FormatDescriptionRsca, ResourceSet.FormatCategoryAnimations, ResourceSet.FormatImageRsca, new string[] { ".rsca" }),
                     new DummyFileFormat(ResourceSet.FormatNameThp, ResourceSet.FormatDescriptionThp, ResourceSet.FormatCategoryVideo, ResourceSet.FormatImageThp, new string[] { ".thp" }),
-                    new DummyFileFormat(ResourceSet.FormatNameTpl, ResourceSet.FormatDescriptionTpl, ResourceSet.FormatCategoryImages, ResourceSet.FormatImageTpl, new string[] { ".tpl" }),
+                    // new DummyFileFormat(ResourceSet.FormatNameTpl, ResourceSet.FormatDescriptionTpl, ResourceSet.FormatCategoryImages, ResourceSet.FormatImageTpl, new string[] { ".tpl" }),
                     new DummyFileFormat(ResourceSet.FormatNameTxt, ResourceSet.FormatDescriptionTxt, ResourceSet.FormatCategoryData, ResourceSet.FormatImageBinary, new string[] { ".txt" }),
                 });
         }
@@ -88,7 +88,7 @@ namespace Chadsoft.CTools
         {
             return new ReadOnlyCollection<Editor>(new Editor[]
                 {
-                    binaryEditor = new Editor(ResourceSet.EditorNameBinary, ResourceSet.EditorDescriptionBinary, "Chadderz", new Version(1,0,0,0), ResourceSet.FormatImageBinary, new ReadOnlyCollection<FileFormat>(new FileFormat[] { formats[0],formats[1]}), CreateInstanceBinary, GeneratePreviewBinary),
+                    binaryEditor = new Editor(ResourceSet.EditorNameBinary, ResourceSet.EditorDescriptionBinary, "Chadderz", new Version(1,0,1,0), ResourceSet.FormatImageBinary, new ReadOnlyCollection<FileFormat>(new FileFormat[] { formats[0],formats[1]}), CreateInstanceBinary, GeneratePreviewBinary),
                 });
         }
 

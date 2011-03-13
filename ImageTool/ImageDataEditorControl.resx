@@ -1,0 +1,693 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="zoomHeaderLabel.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Top, Right</value>
+  </data>
+  <assembly alias="mscorlib" name="mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="zoomHeaderLabel.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <data name="zoomHeaderLabel.Location" type="System.Drawing.Point, System.Drawing">
+    <value>272, 31</value>
+  </data>
+  <data name="zoomHeaderLabel.Size" type="System.Drawing.Size, System.Drawing">
+    <value>34, 13</value>
+  </data>
+  <data name="zoomHeaderLabel.TabIndex" type="System.Int32, mscorlib">
+    <value>3</value>
+  </data>
+  <data name="zoomHeaderLabel.Text" xml:space="preserve">
+    <value>Zoom</value>
+  </data>
+  <data name="&gt;&gt;zoomHeaderLabel.Name" xml:space="preserve">
+    <value>zoomHeaderLabel</value>
+  </data>
+  <data name="&gt;&gt;zoomHeaderLabel.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;zoomHeaderLabel.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;zoomHeaderLabel.ZOrder" xml:space="preserve">
+    <value>15</value>
+  </data>
+  <metadata name="explanationToolTip.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>17, 17</value>
+  </metadata>
+  <data name="zoomTrackBar.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Top, Bottom, Right</value>
+  </data>
+  <data name="zoomTrackBar.Location" type="System.Drawing.Point, System.Drawing">
+    <value>272, 61</value>
+  </data>
+  <data name="zoomTrackBar.Orientation" type="System.Windows.Forms.Orientation, System.Windows.Forms">
+    <value>Vertical</value>
+  </data>
+  <data name="zoomTrackBar.Size" type="System.Drawing.Size, System.Drawing">
+    <value>45, 149</value>
+  </data>
+  <data name="zoomTrackBar.TabIndex" type="System.Int32, mscorlib">
+    <value>4</value>
+  </data>
+  <data name="zoomTrackBar.ToolTip" xml:space="preserve">
+    <value>Zoom into or away from image.</value>
+  </data>
+  <data name="&gt;&gt;zoomTrackBar.Name" xml:space="preserve">
+    <value>zoomTrackBar</value>
+  </data>
+  <data name="&gt;&gt;zoomTrackBar.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TrackBar, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;zoomTrackBar.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;zoomTrackBar.ZOrder" xml:space="preserve">
+    <value>14</value>
+  </data>
+  <data name="viewsLabel.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="viewsLabel.Location" type="System.Drawing.Point, System.Drawing">
+    <value>4, 7</value>
+  </data>
+  <data name="viewsLabel.Size" type="System.Drawing.Size, System.Drawing">
+    <value>38, 13</value>
+  </data>
+  <data name="viewsLabel.TabIndex" type="System.Int32, mscorlib">
+    <value>5</value>
+  </data>
+  <data name="viewsLabel.Text" xml:space="preserve">
+    <value>Views:</value>
+  </data>
+  <data name="&gt;&gt;viewsLabel.Name" xml:space="preserve">
+    <value>viewsLabel</value>
+  </data>
+  <data name="&gt;&gt;viewsLabel.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;viewsLabel.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;viewsLabel.ZOrder" xml:space="preserve">
+    <value>13</value>
+  </data>
+  <data name="viewComboBox.Items" xml:space="preserve">
+    <value>Default</value>
+  </data>
+  <data name="viewComboBox.Items1" xml:space="preserve">
+    <value>Alpha Channel</value>
+  </data>
+  <data name="viewComboBox.Items2" xml:space="preserve">
+    <value>Color Channels</value>
+  </data>
+  <data name="viewComboBox.Items3" xml:space="preserve">
+    <value>Red Channel</value>
+  </data>
+  <data name="viewComboBox.Items4" xml:space="preserve">
+    <value>Green Channel</value>
+  </data>
+  <data name="viewComboBox.Items5" xml:space="preserve">
+    <value>Blue Channel</value>
+  </data>
+  <data name="viewComboBox.Location" type="System.Drawing.Point, System.Drawing">
+    <value>48, 4</value>
+  </data>
+  <data name="viewComboBox.Size" type="System.Drawing.Size, System.Drawing">
+    <value>151, 21</value>
+  </data>
+  <data name="viewComboBox.TabIndex" type="System.Int32, mscorlib">
+    <value>6</value>
+  </data>
+  <data name="viewComboBox.ToolTip" xml:space="preserve">
+    <value>Display filter to show specific channels of an image.
+Default shows all channels.
+Alpha shows only the transparency channel as a grayscale image.
+Color disables the transparency.
+Red shows only the red channel of the image.
+Green shows only the green channel of the image.
+Blue shows only the blue channel of the image.</value>
+  </data>
+  <data name="&gt;&gt;viewComboBox.Name" xml:space="preserve">
+    <value>viewComboBox</value>
+  </data>
+  <data name="&gt;&gt;viewComboBox.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ComboBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;viewComboBox.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;viewComboBox.ZOrder" xml:space="preserve">
+    <value>11</value>
+  </data>
+  <data name="displayPanel.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Top, Bottom, Left, Right</value>
+  </data>
+  <data name="displayPanel.AutoScroll" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="&gt;&gt;displayPictureBox.Name" xml:space="preserve">
+    <value>displayPictureBox</value>
+  </data>
+  <data name="&gt;&gt;displayPictureBox.Type" xml:space="preserve">
+    <value>System.Windows.Forms.PictureBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;displayPictureBox.Parent" xml:space="preserve">
+    <value>displayPanel</value>
+  </data>
+  <data name="&gt;&gt;displayPictureBox.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="displayPanel.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Courier New, 9.75pt</value>
+  </data>
+  <data name="displayPanel.Location" type="System.Drawing.Point, System.Drawing">
+    <value>7, 31</value>
+  </data>
+  <data name="displayPanel.Size" type="System.Drawing.Size, System.Drawing">
+    <value>245, 158</value>
+  </data>
+  <data name="displayPanel.TabIndex" type="System.Int32, mscorlib">
+    <value>7</value>
+  </data>
+  <data name="&gt;&gt;displayPanel.Name" xml:space="preserve">
+    <value>displayPanel</value>
+  </data>
+  <data name="&gt;&gt;displayPanel.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Panel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;displayPanel.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;displayPanel.ZOrder" xml:space="preserve">
+    <value>10</value>
+  </data>
+  <data name="displayPictureBox.Location" type="System.Drawing.Point, System.Drawing">
+    <value>0, 0</value>
+  </data>
+  <data name="displayPictureBox.Size" type="System.Drawing.Size, System.Drawing">
+    <value>0, 0</value>
+  </data>
+  <data name="displayPictureBox.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;displayPictureBox.Name" xml:space="preserve">
+    <value>displayPictureBox</value>
+  </data>
+  <data name="&gt;&gt;displayPictureBox.Type" xml:space="preserve">
+    <value>System.Windows.Forms.PictureBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;displayPictureBox.Parent" xml:space="preserve">
+    <value>displayPanel</value>
+  </data>
+  <data name="&gt;&gt;displayPictureBox.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="mipLabel.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="mipLabel.Location" type="System.Drawing.Point, System.Drawing">
+    <value>205, 7</value>
+  </data>
+  <data name="mipLabel.Size" type="System.Drawing.Size, System.Drawing">
+    <value>56, 13</value>
+  </data>
+  <data name="mipLabel.TabIndex" type="System.Int32, mscorlib">
+    <value>5</value>
+  </data>
+  <data name="mipLabel.Text" xml:space="preserve">
+    <value>Mip Level:</value>
+  </data>
+  <data name="&gt;&gt;mipLabel.Name" xml:space="preserve">
+    <value>mipLabel</value>
+  </data>
+  <data name="&gt;&gt;mipLabel.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;mipLabel.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;mipLabel.ZOrder" xml:space="preserve">
+    <value>12</value>
+  </data>
+  <data name="formatLabel.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Bottom, Left</value>
+  </data>
+  <data name="formatLabel.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="formatLabel.Location" type="System.Drawing.Point, System.Drawing">
+    <value>7, 224</value>
+  </data>
+  <data name="formatLabel.Size" type="System.Drawing.Size, System.Drawing">
+    <value>59, 13</value>
+  </data>
+  <data name="formatLabel.TabIndex" type="System.Int32, mscorlib">
+    <value>8</value>
+  </data>
+  <data name="formatLabel.Text" xml:space="preserve">
+    <value>Format: {0}</value>
+  </data>
+  <data name="formatLabel.ToolTip" xml:space="preserve">
+    <value>Image format of the stored image.</value>
+  </data>
+  <data name="&gt;&gt;formatLabel.Name" xml:space="preserve">
+    <value>formatLabel</value>
+  </data>
+  <data name="&gt;&gt;formatLabel.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;formatLabel.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;formatLabel.ZOrder" xml:space="preserve">
+    <value>9</value>
+  </data>
+  <data name="dimensionsLabel.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Bottom, Left</value>
+  </data>
+  <data name="dimensionsLabel.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="dimensionsLabel.Location" type="System.Drawing.Point, System.Drawing">
+    <value>7, 209</value>
+  </data>
+  <data name="dimensionsLabel.Size" type="System.Drawing.Size, System.Drawing">
+    <value>100, 13</value>
+  </data>
+  <data name="dimensionsLabel.TabIndex" type="System.Int32, mscorlib">
+    <value>8</value>
+  </data>
+  <data name="dimensionsLabel.Text" xml:space="preserve">
+    <value>Dimensions: {0}x{1}</value>
+  </data>
+  <data name="dimensionsLabel.ToolTip" xml:space="preserve">
+    <value>Dimensions in pixels of the image.</value>
+  </data>
+  <data name="&gt;&gt;dimensionsLabel.Name" xml:space="preserve">
+    <value>dimensionsLabel</value>
+  </data>
+  <data name="&gt;&gt;dimensionsLabel.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;dimensionsLabel.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;dimensionsLabel.ZOrder" xml:space="preserve">
+    <value>8</value>
+  </data>
+  <data name="mipNumericUpDown.Location" type="System.Drawing.Point, System.Drawing">
+    <value>267, 5</value>
+  </data>
+  <data name="mipNumericUpDown.Size" type="System.Drawing.Size, System.Drawing">
+    <value>50, 20</value>
+  </data>
+  <data name="mipNumericUpDown.TabIndex" type="System.Int32, mscorlib">
+    <value>9</value>
+  </data>
+  <data name="mipNumericUpDown.ToolTip" xml:space="preserve">
+    <value>The current MipMap level of the image being displayed.</value>
+  </data>
+  <data name="&gt;&gt;mipNumericUpDown.Name" xml:space="preserve">
+    <value>mipNumericUpDown</value>
+  </data>
+  <data name="&gt;&gt;mipNumericUpDown.Type" xml:space="preserve">
+    <value>System.Windows.Forms.NumericUpDown, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;mipNumericUpDown.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;mipNumericUpDown.ZOrder" xml:space="preserve">
+    <value>7</value>
+  </data>
+  <data name="reformatButton.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Bottom, Right</value>
+  </data>
+  <data name="reformatButton.Location" type="System.Drawing.Point, System.Drawing">
+    <value>233, 214</value>
+  </data>
+  <data name="reformatButton.Size" type="System.Drawing.Size, System.Drawing">
+    <value>24, 23</value>
+  </data>
+  <data name="reformatButton.TabIndex" type="System.Int32, mscorlib">
+    <value>10</value>
+  </data>
+  <data name="reformatButton.ToolTip" xml:space="preserve">
+    <value>Resize or reformat image.</value>
+  </data>
+  <data name="&gt;&gt;reformatButton.Name" xml:space="preserve">
+    <value>reformatButton</value>
+  </data>
+  <data name="&gt;&gt;reformatButton.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;reformatButton.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;reformatButton.ZOrder" xml:space="preserve">
+    <value>4</value>
+  </data>
+  <data name="importButton.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Bottom, Right</value>
+  </data>
+  <data name="importButton.Location" type="System.Drawing.Point, System.Drawing">
+    <value>263, 214</value>
+  </data>
+  <data name="importButton.Size" type="System.Drawing.Size, System.Drawing">
+    <value>24, 23</value>
+  </data>
+  <data name="importButton.TabIndex" type="System.Int32, mscorlib">
+    <value>10</value>
+  </data>
+  <data name="importButton.ToolTip" xml:space="preserve">
+    <value>Import image from file.</value>
+  </data>
+  <data name="&gt;&gt;importButton.Name" xml:space="preserve">
+    <value>importButton</value>
+  </data>
+  <data name="&gt;&gt;importButton.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;importButton.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;importButton.ZOrder" xml:space="preserve">
+    <value>5</value>
+  </data>
+  <data name="exportButton.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Bottom, Right</value>
+  </data>
+  <data name="exportButton.Location" type="System.Drawing.Point, System.Drawing">
+    <value>293, 214</value>
+  </data>
+  <data name="exportButton.Size" type="System.Drawing.Size, System.Drawing">
+    <value>24, 23</value>
+  </data>
+  <data name="exportButton.TabIndex" type="System.Int32, mscorlib">
+    <value>10</value>
+  </data>
+  <data name="exportButton.ToolTip" xml:space="preserve">
+    <value>Export image to file.</value>
+  </data>
+  <data name="&gt;&gt;exportButton.Name" xml:space="preserve">
+    <value>exportButton</value>
+  </data>
+  <data name="&gt;&gt;exportButton.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;exportButton.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;exportButton.ZOrder" xml:space="preserve">
+    <value>6</value>
+  </data>
+  <metadata name="explanationToolTip.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>17, 17</value>
+  </metadata>
+  <data name="zoomValueLabel.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Top, Right</value>
+  </data>
+  <data name="zoomValueLabel.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="zoomValueLabel.Location" type="System.Drawing.Point, System.Drawing">
+    <value>275, 48</value>
+  </data>
+  <data name="zoomValueLabel.Size" type="System.Drawing.Size, System.Drawing">
+    <value>33, 13</value>
+  </data>
+  <data name="zoomValueLabel.TabIndex" type="System.Int32, mscorlib">
+    <value>11</value>
+  </data>
+  <data name="zoomValueLabel.Text" xml:space="preserve">
+    <value>100%</value>
+  </data>
+  <data name="zoomValueLabel.ToolTip" xml:space="preserve">
+    <value>The current zoom expressed as a percentage of the original size.</value>
+  </data>
+  <data name="&gt;&gt;zoomValueLabel.Name" xml:space="preserve">
+    <value>zoomValueLabel</value>
+  </data>
+  <data name="&gt;&gt;zoomValueLabel.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;zoomValueLabel.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;zoomValueLabel.ZOrder" xml:space="preserve">
+    <value>3</value>
+  </data>
+  <data name="formatProgressBar.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Bottom, Right</value>
+  </data>
+  <data name="formatProgressBar.Location" type="System.Drawing.Point, System.Drawing">
+    <value>151, 214</value>
+  </data>
+  <data name="formatProgressBar.Size" type="System.Drawing.Size, System.Drawing">
+    <value>76, 23</value>
+  </data>
+  <data name="formatProgressBar.TabIndex" type="System.Int32, mscorlib">
+    <value>12</value>
+  </data>
+  <data name="formatProgressBar.ToolTip" xml:space="preserve">
+    <value>Progress of the current formatting operation.</value>
+  </data>
+  <data name="formatProgressBar.Visible" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="&gt;&gt;formatProgressBar.Name" xml:space="preserve">
+    <value>formatProgressBar</value>
+  </data>
+  <data name="&gt;&gt;formatProgressBar.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ProgressBar, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;formatProgressBar.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;formatProgressBar.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <metadata name="FileOpenFileDialog.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>173, 17</value>
+  </metadata>
+  <data name="FileOpenFileDialog.Filter" xml:space="preserve">
+    <value>All Picture Files (*.bmp, *.dib, *.rle, *.jpg, *.jpeg, *.jpe, *.jfif, *.gif, *.tif, *.tiff, *.png)|*.BMP;*.DIB;*.RLE;*.JPG;*.JPEG;*.JPE;*.JFIF;*.GIF;*.TIF;*.TIFF;*.PNG|Bitmap images (*.bmp, *.dib, *.rle)|*.BMP;*.DIB;*.RLE|JPEG images (*.jpg, *.jpeg, *.jpe, *.jfif)|*.JPG;*.JPEG;*.JPE;*.JFIF|GIF images (*.gif)|*.GIF|TIFF images (*.tif, *.tiff)|*.TIF;*.TIFF|PNG images (*.png)|*.PNG|All Files (*.*)|*.*</value>
+  </data>
+  <metadata name="FileSaveFileDialog.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>327, 17</value>
+  </metadata>
+  <data name="FileSaveFileDialog.Filter" xml:space="preserve">
+    <value>Bitmap image (*.bmp)|*.bmp;*.dib;*.rle|JPEG image (*.jpeg)|*.jpeg;*.jpg;*.jpe;*.jfif|GIF images (*.gif)|*.gif|TIFF images (*.tiff)|*.tiff;*.tif|PNG images (*.png)|*.png</value>
+  </data>
+  <metadata name="formatterBackgroundWorker.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>476, 17</value>
+  </metadata>
+  <data name="displayVScrollBar.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Top, Bottom, Right</value>
+  </data>
+  <data name="displayVScrollBar.Location" type="System.Drawing.Point, System.Drawing">
+    <value>252, 31</value>
+  </data>
+  <data name="displayVScrollBar.Size" type="System.Drawing.Size, System.Drawing">
+    <value>17, 158</value>
+  </data>
+  <data name="displayVScrollBar.TabIndex" type="System.Int32, mscorlib">
+    <value>13</value>
+  </data>
+  <data name="&gt;&gt;displayVScrollBar.Name" xml:space="preserve">
+    <value>displayVScrollBar</value>
+  </data>
+  <data name="&gt;&gt;displayVScrollBar.Type" xml:space="preserve">
+    <value>System.Windows.Forms.VScrollBar, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;displayVScrollBar.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;displayVScrollBar.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="displayHScrollBar.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Bottom, Left, Right</value>
+  </data>
+  <data name="displayHScrollBar.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="displayHScrollBar.Location" type="System.Drawing.Point, System.Drawing">
+    <value>7, 189</value>
+  </data>
+  <data name="displayHScrollBar.Size" type="System.Drawing.Size, System.Drawing">
+    <value>245, 17</value>
+  </data>
+  <data name="displayHScrollBar.TabIndex" type="System.Int32, mscorlib">
+    <value>14</value>
+  </data>
+  <data name="&gt;&gt;displayHScrollBar.Name" xml:space="preserve">
+    <value>displayHScrollBar</value>
+  </data>
+  <data name="&gt;&gt;displayHScrollBar.Type" xml:space="preserve">
+    <value>System.Windows.Forms.HScrollBar, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;displayHScrollBar.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;displayHScrollBar.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <metadata name="$this.Localizable" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <data name="$this.AutoScaleDimensions" type="System.Drawing.SizeF, System.Drawing">
+    <value>6, 13</value>
+  </data>
+  <data name="$this.Size" type="System.Drawing.Size, System.Drawing">
+    <value>320, 240</value>
+  </data>
+  <data name="&gt;&gt;explanationToolTip.Name" xml:space="preserve">
+    <value>explanationToolTip</value>
+  </data>
+  <data name="&gt;&gt;explanationToolTip.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolTip, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;FileOpenFileDialog.Name" xml:space="preserve">
+    <value>FileOpenFileDialog</value>
+  </data>
+  <data name="&gt;&gt;FileOpenFileDialog.Type" xml:space="preserve">
+    <value>System.Windows.Forms.OpenFileDialog, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;FileSaveFileDialog.Name" xml:space="preserve">
+    <value>FileSaveFileDialog</value>
+  </data>
+  <data name="&gt;&gt;FileSaveFileDialog.Type" xml:space="preserve">
+    <value>System.Windows.Forms.SaveFileDialog, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;formatterBackgroundWorker.Name" xml:space="preserve">
+    <value>formatterBackgroundWorker</value>
+  </data>
+  <data name="&gt;&gt;formatterBackgroundWorker.Type" xml:space="preserve">
+    <value>System.ComponentModel.BackgroundWorker, System, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;$this.Name" xml:space="preserve">
+    <value>ImageDataEditorControl</value>
+  </data>
+  <data name="&gt;&gt;$this.Type" xml:space="preserve">
+    <value>System.Windows.Forms.UserControl, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+</root>

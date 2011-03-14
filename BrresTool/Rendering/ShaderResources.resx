@@ -1,0 +1,337 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="PixelShader" xml:space="preserve">
+    <value>// BOTH
+int rrnm(int value, int distance, int maskEnd)
+{
+	return (value / pow(2, distance)) % pow(2, maskEnd);	
+}
+
+// PS
+float4x3 tMatrix0;
+float4x3 tMatrix1;
+float4x3 tMatrix2;
+float4x3 tMatrix3;
+float4x3 tMatrix4;
+float4x3 tMatrix5;
+float4x3 tMatrix6;
+float4x3 tMatrix7;
+
+sampler2D tex0Samp;
+sampler2D tex1Samp;
+sampler2D tex2Samp;
+sampler2D tex3Samp;
+sampler2D tex4Samp;
+sampler2D tex5Samp;
+sampler2D tex6Samp;
+sampler2D tex7Samp;
+
+struct PSInput 
+{
+	float4 col0 : COLOR0;
+	float4 col1 : COLOR1;
+	float2 uv0 : TEXCOORD0;
+	float2 uv1 : TEXCOORD1;
+	float2 uv2 : TEXCOORD2;
+	float2 uv3 : TEXCOORD3;
+	float2 uv4 : TEXCOORD4;
+	float2 uv5 : TEXCOORD5;
+	float2 uv6 : TEXCOORD6;
+	float2 uv7 : TEXCOORD7;
+	int selector : PSIZE;
+};
+
+
+struct PSOutput
+{
+	float4 col : COLOR;
+};
+
+PSOutput mainPS(PSInput input) {
+	PSOutput output;
+	float4 ras = 0, c0 = 0, c1 = 0, c2 = 0, tex = 0, konst = 0;
+	output.col = 0;
+	
+//DATAHERE
+	
+	return output;
+}</value>
+    <comment>The static code for the hlsl pixel shader.</comment>
+  </data>
+  <data name="SimplePixelShader" xml:space="preserve">
+    <value>// SIMPLE PS
+
+struct PSInput 
+{
+	float4 col0 : COLOR0;
+	float4 col1 : COLOR1;
+	float2 uv0 : TEXCOORD0;
+	float2 uv1 : TEXCOORD1;
+	float2 uv2 : TEXCOORD2;
+	float2 uv3 : TEXCOORD3;
+	float2 uv4 : TEXCOORD4;
+	float2 uv5 : TEXCOORD5;
+	float2 uv6 : TEXCOORD6;
+	float2 uv7 : TEXCOORD7;
+	int selector : PSIZE;
+};
+
+struct PSOutput
+{
+	float4 col : COLOR;
+};
+
+PSOutput mainPS(PSInput input) {
+	PSOutput output;
+	
+	output.col = input.col0;
+	
+	return output;
+}</value>
+    <comment>Simple hlsl code for default pixel shader</comment>
+  </data>
+  <data name="VertexShader" xml:space="preserve">
+    <value>// BOTH
+int rrnm(int value, int distance, int maskEnd)
+{
+	return (value / pow(2, distance)) % pow(2, maskEnd);	
+}
+
+// VS
+float4x4 WorldViewProj : WORLDVIEWPROJECTION;
+float4x3 vMatrix0;
+float4x3 vMatrix1;
+float4x3 vMatrix2;
+float4x3 vMatrix3;
+float4x3 vMatrix4;
+float4x3 vMatrix5;
+float4x3 vMatrix6;
+float4x3 vMatrix7;
+float4x3 vMatrix8;
+float4x3 vMatrix9;
+float4x3 vMatrix10;
+float4x3 vMatrix11;
+float4x3 vMatrix12;
+float4x3 vMatrix13;
+float4x3 vMatrix14;
+float4x3 vMatrix15;
+float4x3 vMatrix16;
+float4x3 vMatrix17;
+float4x3 vMatrix18;
+float4x3 vMatrix19;
+float4x3 vMatrix20;
+float4x3 vMatrix21;
+
+struct VSInput 
+{
+	float3 pos : POSITION;
+	int selector : PSIZE;
+	float2 uv0 : TEXCOORD0;
+	float2 uv1 : TEXCOORD1;
+	float2 uv2 : TEXCOORD2;
+	float2 uv3 : TEXCOORD3;
+	float2 uv4 : TEXCOORD4;
+	float2 uv5 : TEXCOORD5;
+	float2 uv6 : TEXCOORD6;
+	float2 uv7 : TEXCOORD7;
+};
+
+struct VSOutput
+{
+	float4 pos : POSITION;
+	float2 uv0 : TEXCOORD0;
+	float2 uv1 : TEXCOORD1;
+	float2 uv2 : TEXCOORD2;
+	float2 uv3 : TEXCOORD3;
+	float2 uv4 : TEXCOORD4;
+	float2 uv5 : TEXCOORD5;
+	float2 uv6 : TEXCOORD6;
+	float2 uv7 : TEXCOORD7;
+};
+
+float4x3 SelectVMatrix(int vMatrix)
+{
+	int mtx = rrnm(vMatrix, 0, 5);
+	
+	if (mtx == 0)
+			return vMatrix0;
+	else if (mtx == 1)
+			return vMatrix1;
+	else if (mtx == 2)
+			return vMatrix2;
+	else if (mtx == 3)
+			return vMatrix3;
+	else if (mtx == 4)
+			return vMatrix4;
+	else if (mtx == 5)
+			return vMatrix5;
+	else if (mtx == 6)
+			return vMatrix6;
+	else if (mtx == 7)
+			return vMatrix7;
+	else if (mtx == 8)
+			return vMatrix8;
+	else if (mtx == 9)
+			return vMatrix9;
+	else if (mtx == 10)
+			return vMatrix10;
+	else if (mtx == 11)
+			return vMatrix11;
+	else if (mtx == 12)
+			return vMatrix12;
+	else if (mtx == 13)
+			return vMatrix13;
+	else if (mtx == 14)
+			return vMatrix14;
+	else if (mtx == 15)
+			return vMatrix15;
+	else if (mtx == 16)
+			return vMatrix16;
+	else if (mtx == 17)
+			return vMatrix17;
+	else if (mtx == 18)
+			return vMatrix18;
+	else if (mtx == 19)
+			return vMatrix19;
+	else if (mtx == 20)
+			return vMatrix20;
+	else 
+			return vMatrix21;
+}
+
+VSOutput mainVS(VSInput input) {
+	VSOutput output;
+	
+	output.pos = float4(mul(float4(input.pos.xyz, 1.0), SelectVMatrix(input.selector)), 1.0);
+	output.pos = mul(float4(output.pos.xyz, 1.0), WorldViewProj);
+	output.uv0 = input.uv0;
+	output.uv1 = input.uv1;
+	output.uv2 = input.uv2;
+	output.uv3 = input.uv3;
+	output.uv4 = input.uv4;
+	output.uv5 = input.uv5;
+	output.uv6 = input.uv6;
+	output.uv7 = input.uv7;
+	
+	return output;
+}</value>
+    <comment>Full hlsl vertex shader used by the renderer.</comment>
+  </data>
+</root>
